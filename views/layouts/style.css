@@ -1,0 +1,47 @@
+* {
+    text-decoration: none;
+    color : black;
+    list-style-type : none;
+}
+
+.header {
+    padding-top : 1%;
+    padding-left : 1%;
+    border-bottom : 2px solid black;
+
+    /*background: yellow;*/
+}
+
+.header__column{
+    display : inline-block;
+
+    /*background: yellowgreen;*/
+}
+
+a, form, li{
+    display : inline-block;
+    margin-left : 20px;
+}
+
+.footer {
+    border-top : 2px solid black;
+}
+
+a:hover {
+    background: #F5FFFA;
+}
+
+.cafeBlock{
+    background: rgba(211, 211, 211, 0.562);
+    display: inline-block;
+    padding : 5%
+}
+
+.cafeBlock:hover{
+    background: #F5FFFA;
+}
+
+.cafeBlock__thumbnail{
+    width:350px;
+    height:200px;
+}

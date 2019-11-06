@@ -1,0 +1,19 @@
+header.header
+    .header__column
+        a(href=routes.home)
+            h1
+                i.fas.fa-mug-hot
+                span.header__text cafe.choice
+    .header__column
+        a(href=routes.conditionalSearch)
+            span 조건검색
+        form(action=routes.search, method="get")
+            input(type="text", placeholder="type..", name="term", required=true)
+            button.searchButton
+                |검색   
+    .header__column
+        ul
+            li
+                a(href=routes.join) join
+            li
+                a(href=routes.login) login

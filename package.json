@@ -1,0 +1,27 @@
+{
+  "name": "cafechoice",
+  "version": "1.0.0",
+  "description": "Wepsite helping people make a choice among diverse cafes",
+  "main": "init.js",
+  "author": "soongjamm",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "morgan": "^1.9.1",
+    "popups": "^1.1.3",
+    "pug": "^2.0.4"
+  },
+  "scripts": {
+    "start": "nodemon --exec babel-node init.js"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}

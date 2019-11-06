@@ -1,0 +1,6 @@
+mixin cafeBlock(cafe = {})
+    .cafeBlock
+        a(href=routes.cafeDetail(cafe.id))
+            img.cafeBlock__thumbnail(src=cafe.imgFile)
+            h2.cafeBlock__name=cafe.name
+            h5.cafeBlock__location=cafe.location
