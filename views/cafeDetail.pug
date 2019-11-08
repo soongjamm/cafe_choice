@@ -1,4 +1,15 @@
 extends layouts/main
+include mixins/cafeInfo
+include mixins/cafeBlock
 
 block content
-    h1 cafe detail
+    +cafeInfo({
+        id : cafe.id,
+        name : cafe.name,
+        location : cafe.location,
+        imageUrl : cafe.imageUrl, 
+        parking : cafe.parking,
+        smoking : cafe.smoking,
+        terrace : cafe.terrace,
+        restroom : cafe.restroom
+    })

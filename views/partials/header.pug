@@ -8,7 +8,7 @@ header.header
         a(href=routes.conditionalSearch)
             span 조건검색
         form(action=routes.search, method="get")
-            input(type="text", placeholder="type..", name="term", required=true)
+            input(type="text", placeholder="카페 이름을 입력하세요.", name="term", required=true)
             button.searchButton
                 |검색   
     .header__column
@@ -16,4 +16,4 @@ header.header
             li
                 a(href=routes.join) join
             li
-                a(href=routes.login) login
+                a(href=routes.login) login 

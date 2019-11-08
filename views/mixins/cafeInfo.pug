@@ -1,0 +1,16 @@
+mixin cafeInfo(cafe = {})
+    .cafeInfo
+        img.cafeInfo__thumbnail(src=cafe.imageUrl)
+        h1.cafeInfo__name=cafe.name
+        h4.cafeInfo__location=cafe.location
+        h4.cafeInfo__option
+            if cafe.parking
+                i.fas.fa-car-side 주차장 &emsp;
+            if cafe.smoking 
+                i.fas.fa-smoking 흡연실 &emsp;
+            if cafe.terrace
+                i.fas.fa-umbrella-beach 테라스 &emsp;
+            if cafe.restroom
+                i.fas.fa-restroom 내부 화장실 &emsp;
+            
+            

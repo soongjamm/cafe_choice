@@ -1,10 +1,15 @@
 extends layouts/main
 
 block content
-    form.conditions
+    form.conditionalSearch__conditions(action=routes.conditionalSearch, method="post")
         input(type="checkbox", name="smoking")
-        label(for="smoking") 흡연실
+        label(for="smoking") 흡연실 &emsp;
         input(type="checkbox", name="outlet")
-        label(for="smoking") 콘센트
+        label(for="smoking") 콘센트 &emsp;
         input(type="checkbox", name="parking")
-        label(for="smoking") 주차장
+        label(for="smoking") 주차장 &emsp;
+        input(type="checkbox", name="terrace")
+        label(for="terrace") 테라스 &emsp;
+        input(type="checkbox", name="restroom")
+        label(for="restroom") 실내 화장실 &emsp;
+        input(type="button", name="submit", value="⭕️제출")

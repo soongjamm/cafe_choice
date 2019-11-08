@@ -19,6 +19,9 @@ const CAFE_DETAIL = "/:id";
 const MAP = "/map";
 const REVIEW = "/review";
 
+//DB Test
+const CAFE_INSERT = "/cafe-insert";
+const CAFE_DELETE_ALL = "/cafe-delete-all";
 
 //routes object
 const routes = {
@@ -48,7 +51,10 @@ const routes = {
         }
     },
     map : MAP,
-    review : REVIEW
+    review : REVIEW,
+    //test
+    cafeInsert : CAFE_INSERT,
+    cafeDeleteAll : CAFE_DELETE_ALL
 }
 
 export default routes;

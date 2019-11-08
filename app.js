@@ -1,5 +1,5 @@
 import express from "express";
-import routes from "./routes"
+import routes from "./routes";
 import globalRouter from "./Routers/globalRouter";
 import cafeRouter from "./Routers/cafeRouter";
 import userRouter from "./Routers/userRouter";
@@ -24,5 +24,7 @@ app.use(localsMiddleware);
 app.use(routes.home, globalRouter);
 app.use(routes.cafes, cafeRouter);
 app.use(routes.users, userRouter);
+
+
 
 export default app ;

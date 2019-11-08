@@ -1,12 +1,56 @@
-import { cafes }  from "../db";
+import routes from "../routes";
+import Cafe from "../models/Cafes"
 
+// //test
+// export const cafeInsert = (req, res) => {
+//     const cafe = new Cafe();
+//     cafe.name = req.body.name;
+//     cafe.location = req.body.location;
+//     cafe.imageUrl = req.body.imageUrl;
 
-export const home = (req, res) =>{
-    res.render("home", {pageTitle: "home", cafes});
+//     cafe.save(function(err){
+//         if(err){
+//             console.error(err);
+//             res.json({result: 0});
+//             return;
+//         }
+
+//         res.json({result: 1});
+//     })
+// }
+
+// export const cafeDeleteAll = (req, res) => {
+//     const cafes = Cafe.find({});
+//     cafes.remove({}, function(err){
+//         if(err){
+//             console.error(err);
+//             res.json({result: 0});
+//             return;
+//         }
+//         res.json({result: 1});
+//     });
+// }
+
+// export const cafeUpdate = (req, res) => {
+// }
+
+export const home = async (req, res) => {
+     try {
+      const cafes = await Cafe.find({});
+      res.render("home", { pageTitle: "Home", cafes });
+      console.dir(cafes);
+    } catch (error) {
+      console.log(error);
+      res.render("home", { pageTitle: "Home", cafes: [] });
+    }
 }
 
-export const cafeDetail = (req, res) =>{
-    res.render("cafeDetail", {pageTitle: "cafeDeatil"});
+
+export const cafeDetail = async (req, res) =>{
+    const cafeObj = await Cafe.find({"_id" : req.params.id });
+    
+    const cafe = cafeObj[0];
+    res.render("cafeDetail", {pageTitle: "cafeDeatil", cafe});
 }
 
 export const review = (req, res) =>{
@@ -17,11 +61,12 @@ export const map = (req, res) =>{
     res.send("this is map");
 }
 
-export const search = (req, res) =>{
+export const search = async (req, res) =>{
     const {
         query: { term: searchingBy }
     } = req;
-    res.render("search", {pageTitle: "search", searchingBy});
+    const cafes = await Cafe.find({"name" : {$regex: searchingBy}});
+    res.render("search", {pageTitle: "search", searchingBy, cafes});
 }
 
 export const conditionalSearch = (req, res) =>{
