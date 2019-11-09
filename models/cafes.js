@@ -13,6 +13,8 @@ const cafeSchema = new mongoose.Schema({
         type : String,
         required : "cafe location is required."
     },
+
+    
     parking : {
         type : Boolean,
         required : "parking availability"
@@ -29,6 +31,8 @@ const cafeSchema = new mongoose.Schema({
         type : Boolean,
         required : "restroom pressence"
     }
+
+    //amenities : [String]
 
 
 });

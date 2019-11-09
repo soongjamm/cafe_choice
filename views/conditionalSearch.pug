@@ -1,15 +1,27 @@
 extends layouts/main
+include mixins/cafeBlock
 
 block content
-    form.conditionalSearch__conditions(action=routes.conditionalSearch, method="post")
-        input(type="checkbox", name="smoking")
-        label(for="smoking") 흡연실 &emsp;
-        input(type="checkbox", name="outlet")
-        label(for="smoking") 콘센트 &emsp;
-        input(type="checkbox", name="parking")
-        label(for="smoking") 주차장 &emsp;
-        input(type="checkbox", name="terrace")
-        label(for="terrace") 테라스 &emsp;
-        input(type="checkbox", name="restroom")
-        label(for="restroom") 실내 화장실 &emsp;
-        input(type="button", name="submit", value="⭕️제출")
+    .conditionalSearch
+        form.conditionalSearch__conditions(action=routes.conditionalSearch, method="post")
+            input(type="checkbox", name="smoking")
+            label(for="smoking") 흡연실 &emsp;
+            input(type="checkbox", name="parking")
+            label(for="parking") 주차장 &emsp;
+            input(type="checkbox", name="terrace")
+            label(for="terrace") 테라스 &emsp;
+            input(type="checkbox", name="restroom")
+            label(for="restroom") 실내 화장실 &emsp;
+            button.searchButton
+                | 검색
+            
+        
+        .conditionalSearch__cafeBlock
+            if cafes!=null
+                each item in cafes
+                    +cafeBlock({
+                        id : item.id,
+                        name : item.name,
+                        location : item.location,
+                        imageUrl : item.imageUrl
+                    })

@@ -3,6 +3,9 @@ mixin cafeInfo(cafe = {})
         img.cafeInfo__thumbnail(src=cafe.imageUrl)
         h1.cafeInfo__name=cafe.name
         h4.cafeInfo__location=cafe.location
+        h4.cafeInfo__amenities=cafe.amenities
+
+
         h4.cafeInfo__option
             if cafe.parking
                 i.fas.fa-car-side 주차장 &emsp;

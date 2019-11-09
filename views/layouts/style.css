@@ -31,6 +31,13 @@ a:hover {
     background: #F5FFFA;
 }
 
+.conditionalSearch{
+    padding-top: 1%;
+}
+.conditionalSearch__conditions{
+    padding-bottom: 1%;
+}
+
 .cafeBlock{
     background: rgba(211, 211, 211, 0.562);
     display: inline-block;
@@ -44,4 +51,12 @@ a:hover {
 .cafeBlock__thumbnail{
     width:350px;
     height:200px;
+}
+
+.cafeInfo{
+}
+
+.cafeInfo__thumbnail{
+    width:500px;
+    height:350px;
 }

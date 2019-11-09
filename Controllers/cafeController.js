@@ -66,12 +66,22 @@ export const search = async (req, res) =>{
         query: { term: searchingBy }
     } = req;
     const cafes = await Cafe.find({"name" : {$regex: searchingBy}});
+    console.log(cafes);
     res.render("search", {pageTitle: "search", searchingBy, cafes});
 }
 
 export const conditionalSearch = (req, res) =>{
     res.render("conditionalSearch",{pageTitle: "조건검색"});
 }
+
+export const postConditionalSearch = async (req, res) => {
+    Object.keys(req.body).forEach( (key, value) => {return req.body[key] = true;});
+    const cafes = await Cafe.find({$and:[req.body]});
+    res.render("conditionalSearch",{pageTitle: "조건검색", cafes});
+    console.log(cafes);
+ 
+}
+
 
 export const ameIndex = (req, res) =>{
     res.send("this is ame-Index");
