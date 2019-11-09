@@ -15,10 +15,21 @@ export const home = async (req, res) => {
 
 
 export const cafeDetail = async (req, res) =>{
-    const cafeObj = await Cafe.find({"_id" : req.params.id });
-    
-    const cafe = cafeObj[0];
-    res.render("cafeDetail", {pageTitle: "cafeDeatil", cafe});
+    const { 
+        params : {id}
+    }=req;
+
+    try{
+        const cafe = await Cafe.findById(id);
+        console.log(cafe);
+        res.render("cafeDetail", {pageTitle: "cafe Detail", cafe});
+    }catch(error){
+        res.redirect(routes.home);
+    }
+  
+    // const cafeObj = await Cafe.find({"_id" : req.params.id });
+    // const cafe = cafeObj[0];
+    // res.render("cafeDetail", {pageTitle: "cafeDeatil", cafe});
 }
 
 export const review = (req, res) =>{
@@ -43,10 +54,12 @@ export const conditionalSearch = (req, res) =>{
 }
 
 export const postConditionalSearch = async (req, res) => {
-    Object.keys(req.body).forEach( (key, value) => {return req.body[key] = true;});
-    const cafes = await Cafe.find({$and:[req.body]});
-    res.render("conditionalSearch",{pageTitle: "조건검색", cafes});
+   // Object.keys(req.body).forEach( (key, value) => {return req.body[key] = true;});
+   // const cafes = await Cafe.find({$and:[req.body]});
+    
+    const cafes = await Cafe.find({'amenities.amen' : {'$all' : Object.keys(req.body) }});
     console.log(cafes);
+    res.render("conditionalSearch",{pageTitle: "조건검색", cafes});
     
 }
 

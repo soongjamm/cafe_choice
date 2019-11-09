@@ -30,6 +30,14 @@ const cafeSchema = new mongoose.Schema({
     restroom : {
         type : Boolean,
      //   required : "restroom pressence"
+    },
+
+    menu : {
+        type : [Object]
+    },
+    
+    amenities : {
+        type : [Object]
     }
 
     //amenities : [String]
