@@ -17,19 +17,19 @@ const cafeSchema = new mongoose.Schema({
     
     parking : {
         type : Boolean,
-        required : "parking availability"
+       // required : "parking availability"
     },
     smoking : {
         type : Boolean,
-        required : "smoking availability"
+      //  required : "smoking availability"
     },
     terrace : {
         type : Boolean,
-        required : "terrace presence"
+     //   required : "terrace presence"
     },
     restroom : {
         type : Boolean,
-        required : "restroom pressence"
+     //   required : "restroom pressence"
     }
 
     //amenities : [String]

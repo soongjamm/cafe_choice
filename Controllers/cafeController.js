@@ -1,47 +1,15 @@
 import routes from "../routes";
 import Cafe from "../models/Cafes"
 
-// //test
-// export const cafeInsert = (req, res) => {
-//     const cafe = new Cafe();
-//     cafe.name = req.body.name;
-//     cafe.location = req.body.location;
-//     cafe.imageUrl = req.body.imageUrl;
-
-//     cafe.save(function(err){
-//         if(err){
-//             console.error(err);
-//             res.json({result: 0});
-//             return;
-//         }
-
-//         res.json({result: 1});
-//     })
-// }
-
-// export const cafeDeleteAll = (req, res) => {
-//     const cafes = Cafe.find({});
-//     cafes.remove({}, function(err){
-//         if(err){
-//             console.error(err);
-//             res.json({result: 0});
-//             return;
-//         }
-//         res.json({result: 1});
-//     });
-// }
-
-// export const cafeUpdate = (req, res) => {
-// }
 
 export const home = async (req, res) => {
-     try {
-      const cafes = await Cafe.find({});
-      res.render("home", { pageTitle: "Home", cafes });
-      console.dir(cafes);
+    try {
+        const cafes = await Cafe.find({});
+        res.render("home", { pageTitle: "Home", cafes });
+        console.dir(cafes);
     } catch (error) {
-      console.log(error);
-      res.render("home", { pageTitle: "Home", cafes: [] });
+        console.log(error);
+        res.render("home", { pageTitle: "Home", cafes: [] });
     }
 }
 
@@ -79,10 +47,44 @@ export const postConditionalSearch = async (req, res) => {
     const cafes = await Cafe.find({$and:[req.body]});
     res.render("conditionalSearch",{pageTitle: "조건검색", cafes});
     console.log(cafes);
- 
+    
 }
 
 
 export const ameIndex = (req, res) =>{
     res.send("this is ame-Index");
 }
+
+
+// //test
+export const cafeInsert = (req, res) => {
+    const cafe = new Cafe();
+    cafe.name = req.body.name;
+    cafe.location = req.body.location;
+    cafe.imageUrl = req.body.imageUrl;
+
+    cafe.save(function(err){
+        if(err){
+            console.error(err);
+            res.json({result: 0});
+            return;
+        }
+
+        res.json({result: 1});
+    })
+}
+
+export const cafeDeleteAll = (req, res) => {
+    const cafes = Cafe.find({});
+    cafes.remove({}, function(err){
+        if(err){
+            console.error(err);
+            res.json({result: 0});
+            return;
+        }
+        res.json({result: 1});
+    });
+}
+
+// export const cafeUpdate = (req, res) => {
+// }
