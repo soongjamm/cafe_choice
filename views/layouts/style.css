@@ -7,7 +7,7 @@
 .header {
     padding-top : 1%;
     padding-left : 1%;
-    border-bottom : 2px solid black;
+    border-bottom : 3px solid black;
 
     /*background: yellow;*/
 }
@@ -24,7 +24,7 @@ a, form, li{
 }
 
 .footer {
-    border-top : 2px solid black;
+    border-top : 3px solid black;
 }
 
 a:hover {
@@ -54,9 +54,23 @@ a:hover {
 }
 
 .cafeInfo{
+    margin-top:10px;
+    text-align: center;
+}
+
+.cafeInfo__menuItem{
+    margin-right : 2%;
+    margin-left : 2%;
+    width: 10em;
+}
+
+.cafeInfo__menu{
+    border: 2px solid black ;
+    padding-bottom : 10px;
 }
 
 .cafeInfo__thumbnail{
     width:500px;
     height:350px;
+    border:2px solid brown;
 }

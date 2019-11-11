@@ -57,7 +57,8 @@ export const postConditionalSearch = async (req, res) => {
    // Object.keys(req.body).forEach( (key, value) => {return req.body[key] = true;});
    // const cafes = await Cafe.find({$and:[req.body]});
     
-    const cafes = await Cafe.find({'amenities.amen' : {'$all' : Object.keys(req.body) }});
+    const cafes = await Cafe.find({'amenities.name' : {'$all' : Object.keys(req.body) }});
+    console.log(Object.keys(req.body));
     console.log(cafes);
     res.render("conditionalSearch",{pageTitle: "조건검색", cafes});
     

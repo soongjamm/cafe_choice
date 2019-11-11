@@ -5,10 +5,10 @@ mixin cafeInfo(cafe = {})
         h4.cafeInfo__location=cafe.location
 
         .cafeInfo__menu
+            h2 메뉴판
             each item in cafe.menu
-                h5.cafeInfo__menuItem=`${Object.keys(item)} : ${Object.values(item)}원` 
-
-
+                span.cafeInfo__menuItem=`${Object.keys(item)} - ${Object.values(item)}원`
+                br
         h4.cafeInfo__option
             each item in cafe.amenities
                 i(class= item.icon) &nbsp; #{item.amen} &emsp;

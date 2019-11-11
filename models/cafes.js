@@ -14,24 +14,6 @@ const cafeSchema = new mongoose.Schema({
         required : "cafe location is required."
     },
 
-    
-    parking : {
-        type : Boolean,
-       // required : "parking availability"
-    },
-    smoking : {
-        type : Boolean,
-      //  required : "smoking availability"
-    },
-    terrace : {
-        type : Boolean,
-     //   required : "terrace presence"
-    },
-    restroom : {
-        type : Boolean,
-     //   required : "restroom pressence"
-    },
-
     menu : {
         type : [Object]
     },
