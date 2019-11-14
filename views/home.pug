@@ -3,11 +3,14 @@ include mixins/cafeBlock
 
 
 block content
-    each item in cafes
-        +cafeBlock({
-            id : item.id,
-            name : item.name,
-            location : item.location,
-            imageUrl : item.imageUrl
-        })
-    
+    .home
+        each item in cafes
+            +cafeBlock({
+                id : item.id,
+                name : item.name,
+                location : item.location,
+                imageUrl : item.imageUrl,
+                amenities : item.amenities,
+                menu : item.menu
+            })
+        

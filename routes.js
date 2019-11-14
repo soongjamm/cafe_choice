@@ -17,7 +17,7 @@ const CHANGE_PASSWORD = "/change-password";
 const CAFES = "/cafes";
 const CAFE_DETAIL = "/:id";
 const MAP = "/map";
-const REVIEW = "/review";
+const REVIEW_ADD = "/review-add";
 
 //DB Test
 const CAFE_INSERT = "/cafe-insert";
@@ -51,7 +51,13 @@ const routes = {
         }
     },
     map : MAP,
-    review : REVIEW,
+    reviewAdd : id => {
+        if(id){
+            return `/cafes${REVIEW_ADD}`;
+        }else{
+            return REVIEW_ADD;
+        }
+    },
     //test
     cafeInsert : CAFE_INSERT,
     cafeDeleteAll : CAFE_DELETE_ALL

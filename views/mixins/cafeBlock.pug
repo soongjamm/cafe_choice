@@ -2,5 +2,9 @@ mixin cafeBlock(cafe = {})
     .cafeBlock
         a(href=routes.cafeDetail(cafe.id))
             img.cafeBlock__thumbnail(src=cafe.imageUrl)
-            h2.cafeBlock__name=cafe.name
-            h5.cafeBlock__location=cafe.location
+            h2.cafeBlock__name= cafe.name
+            h4.cafeBlock__americano= `${Object.keys(cafe.menu[0])} ${Object.values(cafe.menu[0])}원`
+            h5.cafeBlock__location= cafe.location
+            h4.cafeBlock__option
+            each item in cafe.amenities
+                i(class= item.icon) &nbsp; #{item.amen} &emsp;

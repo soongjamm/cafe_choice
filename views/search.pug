@@ -1,13 +1,15 @@
 extends layouts/main
-include mixins/cafeBlock
+include mixins/searchedBlock
 
 block content
-    .search__header
+    .search
         each item in cafes
-            +cafeBlock({
+            +searchedBlock({
                 id : item.id,
-               name : item.name,
-               location : item.location,
-               imageUrl : item.imageUrl
+                name : item.name,
+                location : item.location,
+                imageUrl : item.imageUrl,
+                amenities : item.amenities,
+                menu : item.menu
             })
         h2 #{searchingBy}(으)로 검색한 결과 

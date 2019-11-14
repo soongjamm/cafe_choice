@@ -1,0 +1,10 @@
+mixin searchedBlock(cafe = {})
+    .cafeBlock
+        a(href=routes.cafeDetail(cafe.id))
+            img.searchedBlock__thumbnail(src=cafe.imageUrl)
+            h2.searchedBlock__name=cafe.name
+            h4.cafeBlock__americano= `${Object.keys(cafe.menu[0])} ${Object.values(cafe.menu[0])}원`
+            h5.searchedBlock__location=cafe.location
+            h4.searchedBlock__option
+                each item in cafe.amenities
+                    i(class= item.icon) &nbsp; #{item.amen} &emsp;

@@ -6,7 +6,7 @@ export const home = async (req, res) => {
     try {
         const cafes = await Cafe.find({});
         res.render("home", { pageTitle: "Home", cafes });
-        console.dir(cafes);
+       // console.dir(cafes);
     } catch (error) {
         console.log(error);
         res.render("home", { pageTitle: "Home", cafes: [] });
@@ -21,7 +21,7 @@ export const cafeDetail = async (req, res) =>{
 
     try{
         const cafe = await Cafe.findById(id);
-        console.log(cafe);
+    //    console.log(cafe);
         res.render("cafeDetail", {pageTitle: "cafe Detail", cafe});
     }catch(error){
         res.redirect(routes.home);
@@ -32,8 +32,8 @@ export const cafeDetail = async (req, res) =>{
     // res.render("cafeDetail", {pageTitle: "cafeDeatil", cafe});
 }
 
-export const review = (req, res) =>{
-    res.send("this is review");
+export const reviewAdd = async (req, res) =>{
+    console.log(req.body);
 }
 
 export const map = (req, res) =>{
@@ -45,7 +45,7 @@ export const search = async (req, res) =>{
         query: { term: searchingBy }
     } = req;
     const cafes = await Cafe.find({"name" : {$regex: searchingBy}});
-    console.log(cafes);
+    //console.log(cafes);
     res.render("search", {pageTitle: "search", searchingBy, cafes});
 }
 
@@ -55,11 +55,10 @@ export const conditionalSearch = (req, res) =>{
 
 export const postConditionalSearch = async (req, res) => {
    // Object.keys(req.body).forEach( (key, value) => {return req.body[key] = true;});
-   // const cafes = await Cafe.find({$and:[req.body]});
-    
+   // const cafes = await Cafe.find({$and:[req.body]}); 
     const cafes = await Cafe.find({'amenities.name' : {'$all' : Object.keys(req.body) }});
     console.log(Object.keys(req.body));
-    console.log(cafes);
+    //console.log(cafes);
     res.render("conditionalSearch",{pageTitle: "조건검색", cafes});
     
 }

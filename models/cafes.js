@@ -20,9 +20,12 @@ const cafeSchema = new mongoose.Schema({
     
     amenities : {
         type : [Object]
-    }
+    },
 
-    //amenities : [String]
+    reviews : [{
+        type : mongoose.Schema.Types.ObjectId,
+        ref : "review"
+    }]
 
 
 });

@@ -1,6 +1,7 @@
 extends layouts/main
 include mixins/cafeInfo
 include mixins/cafeBlock
+include mixins/reviewBlock
 
 block content
     +cafeInfo({
@@ -10,7 +11,12 @@ block content
         imageUrl : cafe.imageUrl, 
         
         menu : cafe.menu,
-        amenities : cafe.amenities
+        amenities : cafe.amenities,
+        reviews : cafe.reviews
+    })  
 
-
+    +reviewBlock({
+        id : cafe.id,
+        name : cafe.name,
+        reviews : cafe.reviews
     })
