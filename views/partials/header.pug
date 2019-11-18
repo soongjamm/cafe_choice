@@ -6,7 +6,7 @@ header.header
                 span.header__text cafe.choice
     .header__column
         a(href=routes.conditionalSearch)
-            span 조건검색
+            button.btn.btn-primary(type='button')  조건검색
         form(action=routes.search, method="get")
             input(type="text", placeholder="카페 이름을 입력하세요.", name="term", required=true)
             button.searchButton
