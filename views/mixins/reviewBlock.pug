@@ -3,10 +3,10 @@ mixin reviewBlock(cafe={})
         h1=`리뷰`
         form.reviewBlock__textfield(action=routes.reviewAdd(cafe.id), method="post")
             textarea(id=`${cafe.id}`, name="reviewField")
-            button.submitButton
-                | 작성
+            <button type = "button" class="btn btn-primary btn-lg">| 작성 </button>
 
         .contents
         each item in cafe.reviews
             p=item.content
-    
+
+       
