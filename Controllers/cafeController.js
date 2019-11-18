@@ -64,8 +64,10 @@ export const postConditionalSearch = async (req, res) => {
 }
 
 
-export const ameIndex = (req, res) =>{
-    res.send("this is ame-Index");
+export const ameIndex = async(req, res) =>{
+    const cafes = await Cafe.find({}).sort({americano:1});
+    
+    res.render("ameIndex", {pageTitle: "아메지수", cafes});
 }
 
 
