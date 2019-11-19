@@ -75,3 +75,15 @@ a:hover {
     height:350px;
     border:2px solid brown;
 }
+
+
+#map {
+    height: 300px;
+    width: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}

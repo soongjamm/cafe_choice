@@ -1,9 +1,8 @@
 extends layouts/main
 
 block content
+    h1 아메지수 #{ameindex}
     each item in cafes
         p= `${item.name} ${Object.values(item.menu[0])}원`
-    
-    h1 아메지수 #{}원
     
     

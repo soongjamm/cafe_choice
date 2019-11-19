@@ -13,19 +13,27 @@ const cafeSchema = new mongoose.Schema({
         type : String,
         required : "cafe location is required."
     },
-
-    menu : {
-        type : [Object]
+    latlng : {
+        lat : {
+            type: Number
+        },
+        lng : {
+            type: Number
+        }
     },
+
+    menu : [{
+        name : {
+            type: String
+        },
+        price : {
+            type: String
+        }
+    }],
     
     amenities : {
         type : [Object]
-    },
-
-    reviews : [{
-        type : mongoose.Schema.Types.ObjectId,
-        ref : "review"
-    }]
+    }
 
 
 });

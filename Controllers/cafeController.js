@@ -1,12 +1,12 @@
 import routes from "../routes";
-import Cafe from "../models/Cafes"
-
+import Cafe from "../models/Cafes";
+import jsStringify from "js-stringify";
+ 
 
 export const home = async (req, res) => {
     try {
         const cafes = await Cafe.find({});
         res.render("home", { pageTitle: "Home", cafes });
-       // console.dir(cafes);
     } catch (error) {
         console.log(error);
         res.render("home", { pageTitle: "Home", cafes: [] });
@@ -22,7 +22,7 @@ export const cafeDetail = async (req, res) =>{
     try{
         const cafe = await Cafe.findById(id);
     //    console.log(cafe);
-        res.render("cafeDetail", {pageTitle: "cafe Detail", cafe});
+        res.render("cafeDetail", {pageTitle: "cafe Detail", jsStringify, cafe});
     }catch(error){
         res.redirect(routes.home);
     }
@@ -33,10 +33,11 @@ export const cafeDetail = async (req, res) =>{
 }
 
 export const reviewAdd = async (req, res) =>{
-    console.log(req.body);
+   
 }
 
 export const map = (req, res) =>{
+    
     res.send("this is map");
 }
 
@@ -66,8 +67,15 @@ export const postConditionalSearch = async (req, res) => {
 
 export const ameIndex = async(req, res) =>{
     const cafes = await Cafe.find({}).sort({americano:1});
+    // 아메지수 계산
+    let ameindex=0;
     
-    res.render("ameIndex", {pageTitle: "아메지수", cafes});
+    cafes.forEach(function(item){
+        ameindex+=item.americano;
+        console.log(typeof(item.americano));
+    });
+    ameindex/=cafes.length;
+    res.render("ameIndex", {pageTitle: "아메지수", cafes, ameindex});
 }
 
 
