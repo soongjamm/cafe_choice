@@ -2,6 +2,7 @@ extends layouts/main
 include mixins/cafeInfo
 include mixins/cafeBlock
 include mixins/reviewBlock
+include mixins/map
 
 block content
     +cafeInfo({
@@ -9,14 +10,11 @@ block content
         name : cafe.name,
         location : cafe.location,
         imageUrl : cafe.imageUrl, 
-        
         menu : cafe.menu,
-        amenities : cafe.amenities,
-        reviews : cafe.reviews
+        amenities : cafe.amenities
     })  
-
-    +reviewBlock({
+    
+    +map({
         id : cafe.id,
-        name : cafe.name,
-        reviews : cafe.reviews
+        latlng : cafe.latlng
     })
