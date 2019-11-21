@@ -1,19 +1,28 @@
 header.header
-    .header__column
-        a(href=routes.home)
-            h1
-                i.fas.fa-mug-hot
-                span.header__text cafe.choice
-    .header__column
-        a(href=routes.conditionalSearch)
-            span 조건검색
-        form(action=routes.search, method="get")
-            input(type="text", placeholder="카페 이름을 입력하세요.", name="term", required=true)
-            button.searchButton
-                |검색   
-    .header__column
-        ul
-            li
-                a(href=routes.join) join
-            li
-                a(href=routes.login) login 
+    nav.navbar.navbar-light.bg-light
+        .header__mainLogo
+            a(href=routes.home, class="navbar-brand")
+                h1
+                    i.fas.fa-mug-hot
+                    span.header__text cafe.choice
+    
+        ul.nav.justify-content-end.header__column.form-inline
+            li.nav-item
+                a(href=routes.conditionalSearch)
+                    button.searchButton.btn-sm.btn.btn-outline-success.my-2.my-sm-0
+                        |조건검색  
+            li.nav-item
+                form(action=routes.search, method="get" )
+                    input(class="form-control", type="search", placeholder="카페 이름을 입력하세요.", name="term", required=true)
+                    button.searchButton.btn.btn-secondary
+                        i.fas.fa-search
+             
+            li.nav-item
+                .dropdown.btn-group
+                    button(class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                        i.fas.fa-align-justify
+                    div(class="dropdown-menu dropdown-menu-right")
+                        a(class="dropdown-item" href=routes.join) JOIN
+                        a(class="dropdown-item" href=rou ㅂtes.login) LOGIN
+                
+        

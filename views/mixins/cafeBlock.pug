@@ -1,11 +1,25 @@
 mixin cafeBlock(cafe = {})
-    .cafeBlock
-        a(href=routes.cafeDetail(cafe.id))
-            img.cafeBlock__thumbnail(src=cafe.imageUrl)
-            h2.cafeBlock__name= cafe.name
-            h4.cafeBlock__americano
-                p=`${cafe.menu[0].name} ${cafe.menu[0].price}원`
-            h5.cafeBlock__location= cafe.location
-            h4.cafeBlock__option
+    div(class="card" style="width: 25rem;")
+        img(src=cafe.imageUrl class="card-img-top cafeBlock__thumbnail" alt="...")
+        .card-body
+            h2.card-title #{cafe.name}
+            h6.card-text #{cafe.location}
+            ul.list-group.list-group-flush
+                li.list-group-item
+                    h6.card-text=`${cafe.menu[0].name} ${cafe.menu[0].price}원`
+            p.card-text.icon
                 each item in cafe.amenities
                     i(class= item.icon) &nbsp; #{item.amen} &emsp;
+            a(href=routes.cafeDetail(cafe.id) class="btn btn-primary")|자세히 보기
+        
+
+    //- .cafeBlock
+    //-     a(href=routes.cafeDetail(cafe.id))
+    //-         img.cafeBlock__thumbnail(src=cafe.imageUrl)
+    //-         h2.cafeBlock__name= cafe.name
+    //-         h4.cafeBlock__americano
+    //-             p=`${cafe.menu[0].name} ${cafe.menu[0].price}원`
+    //-         h5.cafeBlock__location= cafe.location
+    //-         h4.cafeBlock__option
+    //-             each item in cafe.amenities
+    //-                 i(class= item.icon) &nbsp; #{item.amen} &emsp;
