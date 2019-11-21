@@ -1,8 +1,18 @@
 extends layouts/main
 
 block content
-    h1 아메지수 #{ameindex}
-    each item in cafes
-        p= `${item.name} ${Object.values(item.menu[0])}원`
+
+    .jumbotron.jumbotron-fluid
+        .container
+            h1.display-4 아메지수 #{ameindex}
+            p.lead 아메지수는 주변 카페들의 아메리카노 가격의 평균을 내어 물가 수준을 나타내는 하나의 지표입니다.
+            each item in cafes
+                -var x=item.menu[0].price*100/(ameindex*2) 
+                
+                div(class="progress", style="height: 35px;")
+                    div(class="progress-bar", role="progressbar", style=`width:`+x+'%;', aria-valuenow=x, aria-valuemin="0", aria-valuemax="100") #{`${item.name} ${item.menu[0].price}원`}
+                br
+        
+    
     
     

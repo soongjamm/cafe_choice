@@ -66,15 +66,16 @@ export const postConditionalSearch = async (req, res) => {
 
 
 export const ameIndex = async(req, res) =>{
-    const cafes = await Cafe.find({}).sort({americano:1});
+    const cafes = await Cafe.find({}).sort({menu:1});
     // 아메지수 계산
     let ameindex=0;
     
     cafes.forEach(function(item){
-        ameindex+=item.americano;
-        console.log(typeof(item.americano));
+        ameindex+=parseInt(item.menu[0].price);
+        console.log(item.menu[0].price, ameindex);
     });
-    ameindex/=cafes.length;
+    ameindex = Math.floor(ameindex/=cafes.length);
+    
     res.render("ameIndex", {pageTitle: "아메지수", cafes, ameindex});
 }
 
