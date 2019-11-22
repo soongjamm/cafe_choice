@@ -4,7 +4,20 @@ include mixins/cafeBlock
 
 block content
     .home
-    .card-group
+        .card-columns
+            each item in cafes
+                +cafeBlock({
+                    id : item.id,
+                    name : item.name,
+                    location : item.location,
+                    imageUrl : item.imageUrl,
+                    amenities : item.amenities,
+                    menu : item.menu,
+                    latlng : item.latlng
+                })
+            
+//-    
+    .card-columns
         each item in cafes
             +cafeBlock({
                 id : item.id,

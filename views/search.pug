@@ -3,6 +3,9 @@ include mixins/searchedBlock
 
 block content
     .search
+        br
+        h4 &nbsp; #{searchingBy}(으)로 검색한 결과입니다.
+
         each item in cafes
             +searchedBlock({
                 id : item.id,
@@ -12,4 +15,4 @@ block content
                 amenities : item.amenities,
                 menu : item.menu
             })
-        h2 #{searchingBy}(으)로 검색한 결과 
+        

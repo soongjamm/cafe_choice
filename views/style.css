@@ -1,3 +1,10 @@
+.home{
+    margin-left :10%;
+}
+.card{
+    margin-right : 3%;
+    margin-top : 3%;
+}
 
  .header {
     margin-top : 1%;
@@ -45,6 +52,11 @@
 a:hover {
     background: #F5FFFA;
 } */
+
+
+.card-columns{
+    display : inline;
+}
 
 .conditionalSearch{
     padding-top: 1%;

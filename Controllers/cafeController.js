@@ -67,6 +67,12 @@ export const postConditionalSearch = async (req, res) => {
 
 export const ameIndex = async(req, res) =>{
     const cafes = await Cafe.find({}).sort({menu:1});
+    
+    // 아메리카노 가격순으로 정렬
+    cafes.sort(function (a, b) {
+        return a.menu[0].price - b.menu[0].price;
+      });
+    
     // 아메지수 계산
     let ameindex=0;
     
