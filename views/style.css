@@ -1,3 +1,5 @@
+
+
 .home{
     margin-left :10%;
 }
@@ -101,7 +103,7 @@ a:hover {
 .cafeInfo__thumbnail{
     width:500px;
     height:350px;
-    border:2px solid brown;
+    border:2px solid gainsboro;
 }
 
 

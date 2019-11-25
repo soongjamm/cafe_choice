@@ -1,27 +1,28 @@
 mixin searchedBlock(cafe = {})
-    div(class="card mb-3" style="max-width: 1920px;")
-        .row.no-gutters
-            <div class="col-md-4">
-            img(src=cafe.imageUrl, class="card-img" alt="...")
-            </div>
-            <div class="col-md-8">
-            <div class="card-body">
-                h2.card-title #{cafe.name}
-                h6.card-text #{cafe.location}
-                ul.list-group.list-group-flush
-                    li.list-group-item
-                        h6.card-text=`${cafe.menu[0].name} ${cafe.menu[0].price}원`
-                        h6.card-text=`${cafe.menu[1].name} ${cafe.menu[1].price}원`
-                        h6.card-text=`${cafe.menu[2].name} ${cafe.menu[2].price}원`
-                h5.card-text.icon
-                    each item in cafe.amenities
-                        i(class= item.icon) &nbsp; #{item.amen} &emsp;
-                a(href=routes.cafeDetail(cafe.id) class="btn btn-primary")|자세히 보기
-                <p class="card-text"><small class="text-muted">*개의 리뷰</small></p>
-            </div>
+    .container
+        div(class="card mb-3" style="max-width: 1920px;")
+            .row.no-gutters
+                <div class="col-md-4">
+                    img(src=cafe.imageUrl, class="card-img" alt="...")
+                </div>
+                <div class="col-md-8">
+                <div class="card-body">
+                    h2.card-title #{cafe.name}
+                    h6.card-text #{cafe.location}
+                    ul.list-group.list-group-flush
+                        li.list-group-item
+                            h6.card-text=`${cafe.menu[0].name} ${cafe.menu[0].price}원`
+                            h6.card-text=`${cafe.menu[1].name} ${cafe.menu[1].price}원`
+                            h6.card-text=`${cafe.menu[2].name} ${cafe.menu[2].price}원`
+                    h5.card-text.icon
+                        each item in cafe.amenities
+                            i(class= item.icon) &nbsp; #{item.amen} &emsp;
+                    a(href=routes.cafeDetail(cafe.id) class="btn btn-primary")|자세히 보기
+                    <p class="card-text"><small class="text-muted">*개의 리뷰</small></p>
+                </div>
+                </div>
             </div>
         </div>
-    </div>
 
 
     //- .cafeBlock

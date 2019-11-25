@@ -1,17 +1,27 @@
 mixin cafeInfo(cafe = {})
-    .cafeInfo
-        img.cafeInfo__thumbnail(src=cafe.imageUrl)
-        h1.cafeInfo__name=cafe.name
-        h4.cafeInfo__location=cafe.location
+    
 
-        .cafeInfo__menu
-            h2 메뉴판
-            each item in cafe.menu
-                span.cafeInfo__menuItem=`${item.name} - ${item.price}원`
-                br
-        h4.cafeInfo__option
-            each item in cafe.amenities
-                i(class= item.icon) &nbsp; #{item.amen} &emsp;
+    .container
+        .cafeInfo
+            img.cafeInfo__thumbnail(class="rounded" src=cafe.imageUrl)
+            h1.cafeInfo__name=cafe.name
+            p.cafeInfo__location=cafe.location
+            
+            h5.cafeInfo__option
+                each item in cafe.amenities
+                    i(class= item.icon) &nbsp; #{item.amen} &emsp;
+        br
+
+        h1.display-4 메뉴판
+        div(class="cafeInfo__menu col-12 container" style="max-width: 1280px;")
+            ul.list-unstyled.row
+                each item in cafe.menu
+                    li.list-item.col-3.border-top.py-2
+                        span.cafeInfo__menuItem.h6=`${item.name} ${item.price}원`
+            
+
+
+        
            
             
             

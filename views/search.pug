@@ -4,7 +4,7 @@ include mixins/searchedBlock
 block content
     .search
         br
-        h4 &nbsp; #{searchingBy}(으)로 검색한 결과입니다.
+        p.display-4.container #{searchingBy}(으)로 검색한 결과입니다.
 
         each item in cafes
             +searchedBlock({

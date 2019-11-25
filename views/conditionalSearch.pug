@@ -2,33 +2,35 @@ extends layouts/main
 include mixins/searchedBlock
 
 block content
-
-    .conditionalSearch
-        form.conditionalSearch__conditions(action=routes.conditionalSearch, method="post")
-            input(type="checkbox", name="smoking")
-            label(for="smoking") 흡연실 &emsp;
-            input(type="checkbox", name="parking")
-            label(for="parking") 주차장 &emsp;
-            input(type="checkbox", name="terrace")
-            label(for="terrace") 테라스 &emsp;
-            input(type="checkbox", name="restroom")
-            label(for="restroom") 실내 화장실 &emsp;
-            input(type="checkbox", name="plug")
-            label(for="plug") 콘센트 &emsp;
-            input(type="checkbox", name="wifi")
-            label(for="wifi") 와이파이 &emsp;
-            button.searchButton
-                | 검색
+    .container
+        .conditionalSearch
+            form.conditionalSearch__conditions(action=routes.conditionalSearch, method="post")
+                input(type="checkbox", name="smoking")
+                label(for="smoking" class="small") &nbsp;흡연실 &emsp;
+                input(type="checkbox", name="parking")
+                label(for="parking" class="small") &nbsp; 주차장 &emsp;
+                input(type="checkbox", name="terrace")
+                label(for="terrace" class="small") &nbsp; 테라스 &emsp;
+                input(type="checkbox", name="restroom")
+                label(for="restroom" class="small") &nbsp; 실내 화장실 &emsp;
+                input(type="checkbox", name="plug")
+                label(for="plug" class="small") &nbsp; 콘센트 &emsp;
+                input(type="checkbox", name="wifi")
+                label(for="wifi" class="small") &nbsp; 와이파이 &emsp;
+                button.searchButton.btn-sm.btn.btn-secondary.my-2.my-sm-0
+                    | 검색
+                
             
-        
-        .conditionalSearch__cafeBlock
-            if cafes!=null
-                each item in cafes
-                    +searchedBlock({
-                        id : item.id,
-                        name : item.name,
-                        location : item.location,
-                        imageUrl : item.imageUrl,
-                        amenities : item.amenities,
-                        menu : item.menu
-                    })
+    .conditionalSearch__cafeBlock
+        if cafes!=null
+            each item in cafes
+                +searchedBlock({
+                    id : item.id,
+                    name : item.name,
+                    location : item.location,
+                    imageUrl : item.imageUrl,
+                    amenities : item.amenities,
+                    menu : item.menu
+                })
+        else
+            p.display-4.container 검색결과가 없습니다. 

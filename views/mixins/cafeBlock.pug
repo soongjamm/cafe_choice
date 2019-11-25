@@ -6,11 +6,14 @@ mixin cafeBlock(cafe = {})
             h6.card-text #{cafe.location}
             ul.list-group.list-group-flush
                 li.list-group-item
-                    h6.card-text=`${cafe.menu[0].name} ${cafe.menu[0].price}원`
+                    h6.card-text=`${cafe.menu[0].name} ${cafe.menu[0].price}원 `
+                         span.badge.badge-warning 아메리카노
                     h6.card-text=`${cafe.menu[1].name} ${cafe.menu[1].price}원`
                     h6.card-text=`${cafe.menu[2].name} ${cafe.menu[2].price}원`
             p.card-text.icon
                 each item in cafe.amenities
                     i(class= item.icon) &nbsp; #{item.amen} &emsp;
             a(href=routes.cafeDetail(cafe.id) class="btn btn-primary")|자세히 보기
+
+   
         
