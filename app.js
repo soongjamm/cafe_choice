@@ -14,8 +14,11 @@ import globalRouter from "./Routers/globalRouter";
 import userRouter from "./Routers/userRouter";
 import cafeRouter from "./Routers/cafeRouter";
 
+import "./passport";
+
 const app = express();
 
+const CokieStore = MongoStore(session);
 
 app.set("view engine", "pug");
 
@@ -24,6 +27,16 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(helmet());
 app.use(morgan("dev"));
+app.use(
+    session({
+      secret: process.env.COOKIE_SECRET,
+      resave: true,
+      saveUninitialized: false,
+      store: new CokieStore({ mongooseConnection: mongoose.connection })
+    })
+  );
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(localsMiddleware);
 
 app.use(routes.home, globalRouter);
