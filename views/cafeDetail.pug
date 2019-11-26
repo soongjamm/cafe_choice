@@ -3,6 +3,7 @@ include mixins/cafeInfo
 include mixins/cafeBlock
 include mixins/reviewBlock
 include mixins/map
+include mixins/menu
 
 block content
     +cafeInfo({
@@ -17,4 +18,9 @@ block content
     +map({
         id : cafe.id,
         latlng : cafe.latlng
+    })
+
+    +menu({
+        id : cafe.id,
+        menu : cafe.menu
     })

@@ -1,9 +1,19 @@
 mixin map(cafe = {})
-    #map
+    #map.container
         script(type="text/javascript").
             const cafe = !{jsStringify(cafe)};
             var map;
             function initMap() {
+                var current;
+                navigator.geolocation.getCurrentPosition(function(pos) {
+                    var latitude = pos.coords.latitude;
+                    var longitude = pos.coords.longitude;
+                    var latlng = {
+                        lat : pos.coords.latitude, 
+                        lng : pos.coords.longitude
+                    }
+                    current = latlng;
+                });
                 
                 var myLatLng = {lat: cafe.latlng.lat, lng: cafe.latlng.lng};
                 map = new google.maps.Map(document.getElementById('map'), {
@@ -15,6 +25,8 @@ mixin map(cafe = {})
                     map: map,
                     title: 'Hello World!'
                 });
+
             }
-         
+ 
         <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdwXoYejcsOpEoG7c5A_w5CkxV8ycclcI&libraries&callback=initMap"> </script>
+        

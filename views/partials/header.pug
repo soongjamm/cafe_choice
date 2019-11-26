@@ -1,20 +1,20 @@
 header.header
-    nav.navbar.navbar-light.bg-light
-        .header__mainLogo
+    nav.navbar.navbar-light.bg-warning
+        .header__logoContainer
             a(href=routes.home, class="navbar-brand")
-                h1
+                h1.header__mainLogo
                     i.fas.fa-mug-hot
-                    span.header__text cafe.choice
+                    span.header__text &nbsp; cafe.choice
     
         ul.nav.justify-content-end.header__column.form-inline
             li.nav-item
                 a(href=routes.ameIndex)
-                    button.searchButton.btn-sm.btn.btn-warning.my-2.my-sm-0
+                    button.searchButton.btn-sm.btn.btn-success.my-2.my-sm-0
                         |아메지수  
 
             li.nav-item
                 a(href=routes.conditionalSearch)
-                    button.searchButton.btn-sm.btn.btn-outline-success.my-2.my-sm-0
+                    button.searchButton.btn-sm.btn.btn-dark.my-2.my-sm-0
                         |조건검색  
             li.nav-item
                 form(action=routes.search, method="get" )
@@ -26,8 +26,12 @@ header.header
                 .dropdown.btn-group
                     button(class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
                         i.fas.fa-align-justify
-                    div(class="dropdown-menu dropdown-menu-right")
-                        a(class="dropdown-item" href=routes.join) JOIN
-                        a(class="dropdown-item" href=routes.login) LOGIN
-                
+                    if true
+                        div(class="dropdown-menu dropdown-menu-right")
+                            a(class="dropdown-item" href=routes.join) 회원가입
+                            a(class="dropdown-item" href=routes.login) 로그인
+                    else
+                        div(class="dropdown-menu dropdown-menu-right")
+                            a(class="dropdown-item" href=routes.userDetail()) 회원정보
+                            a(class="dropdown-item" href=routes.logout) 로그아웃
         

@@ -1,16 +1,21 @@
-import express from "express";
-import routes from "./routes";
-import globalRouter from "./Routers/globalRouter";
-import cafeRouter from "./Routers/cafeRouter";
-import userRouter from "./Routers/userRouter";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
-import morgan from "morgan";
+import express from "express";
+import flash from "req-flash";
 import helmet from "helmet";
-import { localsMiddleware } from "./middlewares"
-
+import morgan from "morgan";
+import mongoose from "mongoose";
+import MongoStore from "connect-mongo";
+import passport from "passport";
+import routes from "./routes";
+import session from "express-session";
+import { localsMiddleware } from "./middlewares";
+import globalRouter from "./Routers/globalRouter";
+import userRouter from "./Routers/userRouter";
+import cafeRouter from "./Routers/cafeRouter";
 
 const app = express();
+
 
 app.set("view engine", "pug");
 

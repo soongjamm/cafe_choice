@@ -12,12 +12,6 @@ mixin cafeInfo(cafe = {})
                     i(class= item.icon) &nbsp; #{item.amen} &emsp;
         br
 
-        h1.display-4 메뉴판
-        div(class="cafeInfo__menu col-12 container" style="max-width: 1280px;")
-            ul.list-unstyled.row
-                each item in cafe.menu
-                    li.list-item.col-3.border-top.py-2
-                        span.cafeInfo__menuItem.h6=`${item.name} ${item.price}원`
             
 
 

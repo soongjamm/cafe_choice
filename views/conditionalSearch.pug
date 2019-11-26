@@ -17,12 +17,16 @@ block content
                 label(for="plug" class="small") &nbsp; 콘센트 &emsp;
                 input(type="checkbox", name="wifi")
                 label(for="wifi" class="small") &nbsp; 와이파이 &emsp;
+                input(type="checkbox", name="charger")
+                label(for="charger" class="small") &nbsp; 충전기 &emsp;
                 button.searchButton.btn-sm.btn.btn-secondary.my-2.my-sm-0
                     | 검색
-                
-            
+
+    //- -console.log(selection.filter( x=> amenities.hasOwnProperty(x)))
+
     .conditionalSearch__cafeBlock
-        if cafes!=null
+        if sel2 != null 
+            p.display-4.container #{sel2}로 검색한 결과 입니다. 
             each item in cafes
                 +searchedBlock({
                     id : item.id,

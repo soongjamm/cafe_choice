@@ -6,7 +6,7 @@ import jsStringify from "js-stringify";
 export const home = async (req, res) => {
     try {
         const cafes = await Cafe.find({});
-        res.render("home", { pageTitle: "Home", cafes });
+        res.render("home", { pageTitle: "Home", jsStringify, cafes });
     } catch (error) {
         console.log(error);
         res.render("home", { pageTitle: "Home", cafes: [] });
@@ -54,12 +54,25 @@ export const conditionalSearch = (req, res) =>{
     res.render("conditionalSearch",{pageTitle: "조건검색"});
 }
 
+
 export const postConditionalSearch = async (req, res) => {
-   // Object.keys(req.body).forEach( (key, value) => {return req.body[key] = true;});
-   // const cafes = await Cafe.find({$and:[req.body]}); 
     const selection = Object.keys(req.body);
+    // 조건 만족하는 카페 검색
     const cafes = await Cafe.find({'amenities.name' : {'$all' : Object.keys(req.body) }});
-    res.render("conditionalSearch",{pageTitle: "조건검색", cafes, selection});
+    
+    // 선택된 조건의 한글명 배열에 저장
+    let sel2 = undefined;
+    if(cafes != ""){
+        sel2 = selection.map( x => {var tmp = cafes[0].amenities.filter(y => 
+            { if(y.name == x){
+                console.log(y.amen, x);
+                return Object.values(y.amen);
+            }
+        } )
+        return tmp[0].amen;}
+        );
+    }
+    res.render("conditionalSearch",{pageTitle: "조건검색", cafes, sel2});
     
 }
 
@@ -70,7 +83,7 @@ export const ameIndex = async(req, res) =>{
     // 아메리카노 가격순으로 정렬
     cafes.sort(function (a, b) {
         return a.menu[0].price - b.menu[0].price;
-      });
+    });
     
     // 아메지수 계산
     let ameindex=0;
@@ -83,6 +96,13 @@ export const ameIndex = async(req, res) =>{
     
     res.render("ameIndex", {pageTitle: "아메지수", cafes, ameindex});
 }
+
+
+
+
+
+
+
 
 
 // //test
