@@ -25,13 +25,16 @@ const cafeSchema = new mongoose.Schema({
         }
     },
 
-    menu : [{
-        name : {
-            type: String
-        },
-        price : {
-            type: String
-        }
+    menu :  [{ 
+        category : String,
+        subcat : [{
+            name : {
+                type: String
+            },
+            price : {
+                type: String
+            }
+        }]  
     }],
     
     amenities : {

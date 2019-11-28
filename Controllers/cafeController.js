@@ -6,7 +6,7 @@ import jsStringify from "js-stringify";
 export const home = async (req, res) => {
     try {
         // 추천카페 임의로 선정
-        const cafes = await Cafe.find({ 'amenities.name' : "plug", 'amenities.name' : "wifi", 'menu.0.price' : {$lt: 2500}}) ;
+        const cafes = await Cafe.find({ 'amenities.name' : "plug", 'amenities.name' : "wifi", 'menu.subcat.0.price' : {$lt: 2500}}) ;
         res.render("home", { pageTitle: "Home", jsStringify, cafes });
     } catch (error) {
         console.log(error);

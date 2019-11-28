@@ -6,4 +6,6 @@ mixin menu(cafe = {})
             ul.list-unstyled.row
                 each item in cafe.menu
                     li.list-item.col-3.border-top.py-2
-                        span.cafeInfo__menuItem.h6=`${item.name} ${item.price}원`
+                        for i=0 i<item.menu.length i++
+                            span #{i}
+                            span.cafeInfo__menuItem.h6=`${item.name} ${item.price}원`

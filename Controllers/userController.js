@@ -111,7 +111,7 @@ export const kakaoLoginCallback = async function(_, __, profile, cb) {
   console.log(profile);
   const {_json : {id, properties:{nickname}, kakao_account:{email}}} = profile;
   try{
-      const user = await User.findOne({});
+      const user = await User.findOne({email});
       if(user){
         user.kakaoId = id;
         user.save();
