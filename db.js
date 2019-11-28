@@ -3,8 +3,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 mongoose.connect(
-    "mongodb+srv://soongjamm:teamproject@cluster0-1cp3z.mongodb.net/cafe-choice?retryWrites=true&w=majority",
-    // process.env.MONGO_URL2,
+     process.env.MONGO_URL2,
     {
         useUnifiedTopology: true,
         useNewUrlParser: true,

@@ -2,10 +2,10 @@
     display : none;
 }
 
-.container__join{
+.container__join, .container__login{
     padding-top:5%;
-    padding-left:30%;
-    padding-right:30%;
+    padding-left:25%;
+    padding-right:25%;
     text-decoration: none;
 }
 
@@ -167,7 +167,7 @@
 }
 
 .__1,.__2,.__3,.__4{
-    animation-duration: 4s;
+    animation-duration: 2s;
 }
 
 @media screen and (max-width: 480px){
@@ -185,8 +185,8 @@
 
 /* Google Map */
 #map {
-    height: 150px;
-    width: 30%;
+    height: 190px;
+    width: 50%;
 }
 
 
