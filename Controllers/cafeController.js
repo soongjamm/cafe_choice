@@ -1,5 +1,5 @@
 import routes from "../routes";
-import Cafe from "../models/Cafes";
+import Cafe from "../models/cafes";
 import jsStringify from "js-stringify";
 
 // 추천카페 
