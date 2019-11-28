@@ -32,8 +32,7 @@
     "req-flash": "0.0.3"
   },
   "scripts": {
-    "start": "nodemon --exec babel-node init.js",
-    "tunnel": "lt --port 8000"
+    "start": "babel-node init.js"
   },
   "devDependencies": {
     "nodemon": "^1.19.4"
