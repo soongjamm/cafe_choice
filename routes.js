@@ -6,6 +6,7 @@ const LOGOUT = "/logout";
 const SEARCH = "/search";
 const CONDITIONAL_SEARCH = "/conditional-search";
 const AME_INDEX = "/ame-index";
+const LIST_ALL = "/list-all";
 
 //User Router
 const USERS = "/users";
@@ -19,9 +20,14 @@ const CAFE_DETAIL = "/:id";
 const MAP = "/map";
 const REVIEW_ADD = "/review-add";
 
-//DB Test
-const CAFE_INSERT = "/cafe-insert";
-const CAFE_DELETE_ALL = "/cafe-delete-all";
+// Social login
+const GITHUB = "/auth/github";
+const GITHUB_CALLBACK = "/auth/github/callback";
+const KAKAO = "/auth/kakao";
+const KAKAO_CALLBACK = "/auth/kakao/callback";
+const FB = "/auth/facebook";
+const FB_CALLBACK = "/auth/facebook/callback";
+
 
 //routes object
 const routes = {
@@ -32,6 +38,7 @@ const routes = {
     search : SEARCH,
     conditionalSearch : CONDITIONAL_SEARCH,
     ameIndex : AME_INDEX,
+    listAll : LIST_ALL,
     users : USERS,
     userDetail : id => {
         if(id){
@@ -58,9 +65,12 @@ const routes = {
             return REVIEW_ADD;
         }
     },
-    //test
-    cafeInsert : CAFE_INSERT,
-    cafeDeleteAll : CAFE_DELETE_ALL
+    github : GITHUB,
+    githubCallback : GITHUB_CALLBACK,
+    kakao : KAKAO,
+    kakaoCallback : KAKAO_CALLBACK,
+    // facebook : FB,
+    // facebookCallback : FB_CALLBACK
 }
 
 export default routes;

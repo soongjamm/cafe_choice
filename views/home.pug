@@ -1,31 +1,63 @@
 extends layouts/main
-include mixins/cafeBlock
+include mixins/userInfo
 
 
 block content
-    .home
-        .card-columns
-            each item in cafes
-                +cafeBlock({
-                    id : item.id,
-                    name : item.name,
-                    location : item.location,
-                    imageUrl : item.imageUrl,
-                    amenities : item.amenities,
-                    menu : item.menu,
-                    latlng : item.latlng
-                })
-            
-//-    
-    .card-columns
-        each item in cafes
-            +cafeBlock({
-                id : item.id,
-                name : item.name,
-                location : item.location,
-                imageUrl : item.imageUrl,
-                amenities : item.amenities,
-                menu : item.menu,
-                latlng : item.latlng
-            })
+    .home.container
+        .row
+            .col
+                p.btn.btn-danger 오늘의 추천카페
+                <div class="bd-example ">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                        ol.carousel-indicators
+                            -var len=0
+                            while len < cafes.length
+                                if len == 0
+                                    li(data-target="#carouselExampleCaptions" data-slide-to=len class="active")
+                                else
+                                    li(data-target="#carouselExampleCaptions" data-slide-to=len)
+                                -len++
+                        
+                        .carousel-inner
+                            .carousel-inner
+                                -var len2=0
+                                while len2 < cafes.length
+                                    if len2 == 0
+                                        .carousel-item.active
+                                            a(href=routes.cafeDetail(cafes[len2].id))
+                                                img(src=`${cafes[len2].imageUrl}` class="rounded mx-auto d-block w-100" alt="...")
+                                                .carousel-caption.d-none.d-md-block
+                                                    p.display-4 #{cafes[len2].name}
+                                                    h6 #{cafes[len2].location}
+                                    else 
+                                        .carousel-item
+                                             a(href=routes.cafeDetail(cafes[len2].id))
+                                                img(src=`${cafes[len2].imageUrl}` class="rounded mx-auto d-block w-100" alt="...")
+                                                .carousel-caption.d-none.d-md-block
+                                                    p.display-4 #{cafes[len2].name}
+                                                    h6 #{cafes[len2].location}
+                                    -len2++
+                        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
         
+            .home__hi
+                p.__1.lead.animated.fadeInUp.delay-1s 원하시는 카페를 찾아드려요.
+                p.__1.lead.animated.fadeInUp.delay-2s 카페 선택의 편리함
+                br
+                p.__2.display-4.animated.fadeInUp.delay-3s 카페초이스
+                br
+                p.__4.small.animated.fadeInUp.delay-4s 회원가입, 로그인, 로그아웃
+                p.__4.small.animated.fadeInUp.delay-4s 검색, 조건검색, 아메지수
+                p.__4.small.animated.fadeInUp.delay-4s 리뷰, 평점, 지도, 메뉴판 제공
+
+
+
+                

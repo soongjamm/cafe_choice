@@ -1,10 +1,30 @@
 extends layouts/main
 
 block content
-    .form-container
-        form(action=routes.join, method="post")
-            input(type="text", name="name", placeholder="Full Name",required=true)        
-            input(type="email", name="email", placeholder="Email",required=true)
-            input(type="password", name="password", placeholder="Password",required=true)
-            input(type="password", name="password2", placeholder="Verify Password",required=true)
-            input(type="submit",value="Join Now")
+    .container__join
+        p.display-4 회원가입
+        .join_container
+            form(action=routes.join, method="post" class="form__join")
+                input(type="text", name="name", placeholder="Name",required=true, class="form-control")        
+                input(type="email", name="email", placeholder="EMAIL. 로그인시 사용할 이메일을 적어주세요.",required=true, class="form-control")
+                input(type="password", name="password", placeholder="Password. 6글자 이상 입력해주세요.",required=true, class="form-control")
+                input(type="password", name="password2", placeholder="Verify Password. 비밀번호를 재입력 해주세요.",required=true, class="form-control")
+                input(type="submit",value="Join Now" class="btn btn-secondary")
+            br    
+            
+            button.social-login--github.btn.btn-dark
+                a(href=routes.github)
+                    span.__github 
+                        i.xi-github.xi-x
+                           span.small &nbsp;깃허브 아이디로 가입
+                
+            button.social-login--kakao.btn.btn-warning
+                a(href=routes.kakao)
+                    span.__kakao
+                        i.xi-kakaotalk.xi-x
+                           span.small &nbsp;카카오 아이디로 가입
+
+            br
+            br
+            if msg!=""
+                span.h6.btn-danger #{msg}

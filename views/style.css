@@ -1,7 +1,69 @@
+.nav__forMobile{
+    display : none;
+}
+
+.container__join{
+    padding-top:5%;
+    padding-left:30%;
+    padding-right:30%;
+    text-decoration: none;
+}
+
+.lead.small.display-1, .display-2, .display-3, .display-4{
+}
+
+/* 홈화면 */
+.col{
+    max-width: 50%;
+    position: static;
+}
 
 .home{
+    margin-top: 2%;
+    margin-left :10%;
+    display: inline-block;
+    /* float: inline-start; */
+}
+
+.home__hi{
+    text-align: end;
+    margin-left:10%;
+    margin-top: 5%;
+    /* float:left; */
+}
+
+.home__userInfo{
+    /* float: right; */
+    max-width: 720px;
+    margin-top: 5%;
+    /* margin-right: 10%; */
+}
+
+.form__join > input, button{
+    display: block;
+    margin : 10px;
+    
+}
+
+
+.bd-example{
+    min-width: 250px;
+    max-width: 600px;
+}
+
+.d-block{
+    max-height: 400px; 
+
+}
+
+.carousel-caption{
+    text-shadow: 0 0 3px rgb(0, 0, 0);
+}
+
+.listAll{
     margin-left :10%;
 }
+
 .card{
     margin-right : 3%;
     margin-top : 3%;
@@ -17,31 +79,19 @@
 .icon{
     margin-top : 2%;
     margin-bottom : 5%;
+    color:rgba(94, 94, 94, 0.877);
+    text-shadow: 0 0 1px rgb(49, 49, 49);
+
 }
 
 .header__mainLogo{
     color : rgb(56, 56, 56);
-    text-shadow: 0 0 10px rgb(247, 177, 130);
-}
-/* 
-.header__column.navbar-nav{
-    float: right;
-    padding-top: 10px;
+    text-shadow: 0 0 3px rgb(255, 255, 255);
 
-} */
+}
 .searchButton{
     margin-right : 5px;
 }
-
-/* a, form, li{
-    display : inline-block;
-    margin-left : 20px;
-}
-
-.header__column > .form-control{
-    padding-bottom : 0px;
-    padding-right : 0px;
-} */
 
 .form-control > a{
     margin : 0px;
@@ -54,11 +104,6 @@
     margin-left : 1%;
     margin-right : 1%;
 }
-/* 
-a:hover {
-    background: #F5FFFA;
-} */
-
 
 .card-columns{
     display : inline;
@@ -108,8 +153,34 @@ a:hover {
     width:500px;
     height:350px;
     border:2px solid gainsboro;
+    margin-top : 2%;
+    margin-bottom: 2%;
+}
+.__kakao{
+    color: rgb(95, 49, 3);
+}
+.__github{
+    color:white;
+}
+.join_container > button > span > i {
+    color : black;
 }
 
+.__1,.__2,.__3,.__4{
+    animation-duration: 4s;
+}
+
+@media screen and (max-width: 480px){
+    .navbar > ul{
+        display: none;
+    }
+    .nav__forMobile{
+        display: inline-block;
+    }
+    .header__text{
+        font-size: 80%;
+    }
+}
 
 
 /* Google Map */

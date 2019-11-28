@@ -1,10 +1,12 @@
 .socialLogin
-    button.social-login--facebook
-        span
-            i.fab.fa-facebook
-        | Continue with Facebook
-    
-    button.social-login--google
-        span
-            i.fab.fa-google
-        | Continue with Google
+    button.social-login--github.btn.btn-dark
+        a(href=routes.github)
+            span
+                i.xi-github
+                | 깃허브 계정
+        
+    button.social-login--kakao.btn.btn-warning
+        a(href=routes.kakao)
+            span
+                i.xi-kakaotalk
+                | 카카오 계정

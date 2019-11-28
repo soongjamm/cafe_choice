@@ -1,8 +1,9 @@
 mixin cafeBlock(cafe = {})
-    div(class="card" style="width: 25rem;")
+    div(class="card" style="min-width : 10rem; max-width: 25rem;")
         img(src=cafe.imageUrl class="card-img-top cafeBlock__thumbnail" alt="...")
         .card-body
             h3.card-title #{cafe.name}
+            p.small #{cafe.branch}
             h6.card-text #{cafe.location}
             ul.list-group.list-group-flush
                 li.list-group-item
@@ -14,6 +15,8 @@ mixin cafeBlock(cafe = {})
                 each item in cafe.amenities
                     i(class= item.icon) &nbsp; #{item.amen} &emsp;
             a(href=routes.cafeDetail(cafe.id) class="btn btn-primary")|자세히 보기
+            <p class="card-text"><small class="text-muted">*개의 리뷰</small></p>
+
 
             
         

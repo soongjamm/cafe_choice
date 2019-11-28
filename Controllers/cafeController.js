@@ -1,11 +1,12 @@
 import routes from "../routes";
 import Cafe from "../models/Cafes";
 import jsStringify from "js-stringify";
- 
 
+// 추천카페 
 export const home = async (req, res) => {
     try {
-        const cafes = await Cafe.find({});
+        // 추천카페 임의로 선정
+        const cafes = await Cafe.find({ 'amenities.name' : "plug", 'amenities.name' : "wifi", 'menu.0.price' : {$lt: 2500}}) ;
         res.render("home", { pageTitle: "Home", jsStringify, cafes });
     } catch (error) {
         console.log(error);
@@ -21,19 +22,11 @@ export const cafeDetail = async (req, res) =>{
 
     try{
         const cafe = await Cafe.findById(id);
-    //    console.log(cafe);
         res.render("cafeDetail", {pageTitle: "cafe Detail", jsStringify, cafe});
     }catch(error){
         res.redirect(routes.home);
     }
   
-    // const cafeObj = await Cafe.find({"_id" : req.params.id });
-    // const cafe = cafeObj[0];
-    // res.render("cafeDetail", {pageTitle: "cafeDeatil", cafe});
-}
-
-export const reviewAdd = async (req, res) =>{
-   
 }
 
 export const map = (req, res) =>{
@@ -45,8 +38,8 @@ export const search = async (req, res) =>{
     const {
         query: { term: searchingBy }
     } = req;
-    const cafes = await Cafe.find({"name" : {$regex: searchingBy}});
-    //console.log(cafes);
+    const cafes = await Cafe.find({ $or: [{"name" : {$regex: searchingBy}}, {'menu.name' : {$regex: searchingBy}}]});
+    // const cafes = await Cafe.find({"name" : {$regex: searchingBy}});
     res.render("search", {pageTitle: "search", searchingBy, cafes});
 }
 
@@ -98,42 +91,13 @@ export const ameIndex = async(req, res) =>{
 }
 
 
-
-
-
-
-
-
-
-// //test
-export const cafeInsert = (req, res) => {
-    const cafe = new Cafe();
-    cafe.name = req.body.name;
-    cafe.location = req.body.location;
-    cafe.imageUrl = req.body.imageUrl;
-
-    cafe.save(function(err){
-        if(err){
-            console.error(err);
-            res.json({result: 0});
-            return;
-        }
-
-        res.json({result: 1});
-    })
+// 전체카페 나열
+export const listAll = async (req, res) => {
+    try {
+        const cafes = await Cafe.find({});
+        res.render("listAll", { pageTitle: "카페 전체보기", jsStringify, cafes });
+    } catch (error) {
+        console.log(error);
+        res.render("listAll", { pageTitle: "카페 전체보기", cafes: [] });
+    }
 }
-
-export const cafeDeleteAll = (req, res) => {
-    const cafes = Cafe.find({});
-    cafes.remove({}, function(err){
-        if(err){
-            console.error(err);
-            res.json({result: 0});
-            return;
-        }
-        res.json({result: 1});
-    });
-}
-
-// export const cafeUpdate = (req, res) => {
-// }

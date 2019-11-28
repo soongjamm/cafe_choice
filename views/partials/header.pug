@@ -11,6 +11,11 @@ header.header
                 a(href=routes.ameIndex)
                     button.searchButton.btn-sm.btn.btn-success.my-2.my-sm-0
                         |아메지수  
+            li.nav-item
+                a(href=routes.listAll)
+                    button.searchButton.btn-sm.btn.btn-info.my-2.my-sm-0
+                        |모두보기
+            
 
             li.nav-item
                 a(href=routes.conditionalSearch)
@@ -34,4 +39,26 @@ header.header
                         div(class="dropdown-menu dropdown-menu-right")
                             a(class="dropdown-item" href=routes.userDetail(user.id)) 회원정보
                             a(class="dropdown-item" href=routes.logout) 로그아웃
-        
+
+
+        .nav__forMobile
+            .dropdown.btn-group
+                button(class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                    i.fas.fa-align-justify
+                if !user
+                    div(class="dropdown-menu dropdown-menu-right")
+                        a(class="dropdown-item" href=routes.join) 회원가입
+                        a(class="dropdown-item" href=routes.login) 로그인
+                        a(class="dropdown-item" href=routes.ameIndex) 아메지수  
+                        a(class="dropdown-item" href=routes.listAll) 모두보기
+                        a(class="dropdown-item" href=routes.conditionalSearch) 조건검색  
+                 
+                else
+                    div(class="dropdown-menu dropdown-menu-right")
+                        a(class="dropdown-item" href=routes.userDetail(user.id)) 회원정보
+                        a(class="dropdown-item" href=routes.logout) 로그아웃
+                        a(class="dropdown-item" href=routes.ameIndex) 아메지수  
+                        a(class="dropdown-item" href=routes.listAll) 모두보기
+                        a(class="dropdown-item" href=routes.conditionalSearch) 조건검색  
+                        
+

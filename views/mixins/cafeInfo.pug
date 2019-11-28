@@ -4,12 +4,12 @@ mixin cafeInfo(cafe = {})
     .container
         .cafeInfo
             img.cafeInfo__thumbnail(class="rounded" src=cafe.imageUrl)
-            h1.cafeInfo__name=cafe.name
-            p.cafeInfo__location=cafe.location
+            p.cafeInfo__name.display-4=cafe.name
+            p.cafeInfo__location.lead=cafe.location
             
             h5.cafeInfo__option
                 each item in cafe.amenities
-                    i(class= item.icon) &nbsp; #{item.amen} &emsp;
+                    i(class=item.icon).icon &nbsp; #{item.amen} &emsp;
         br
 
             

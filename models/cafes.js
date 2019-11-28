@@ -5,6 +5,9 @@ const cafeSchema = new mongoose.Schema({
         type : String,
         required : "cafe name is required."
     },
+    branch : {
+        type : String
+    },
     imageUrl : {
         type : String,
         required : "cafe image url is required."

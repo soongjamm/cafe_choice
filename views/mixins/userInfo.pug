@@ -1,0 +1,17 @@
+mixin userInfo()
+    
+    .btn.btn-secondary
+        if !user
+            p.display-4 회원가입
+            .join_container
+            form(action=routes.join, method="post" class="form__join")
+                input(type="text", name="name", placeholder="Full Name",required=true, class="form-control")        
+                input(type="email", name="email", placeholder="Email",required=true, class="form-control")
+                input(type="password", name="password", placeholder="Password",required=true, class="form-control")
+                input(type="password", name="password2", placeholder="Verify Password",required=true, class="form-control")
+                input(type="submit",value="Join Now")
+            br 
+            include ../partials/socialLogin
+        else
+            p.display-4 #{user.name}
+    
