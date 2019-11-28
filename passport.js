@@ -10,7 +10,7 @@ passport.use(User.createStrategy());
 passport.use(new GithubStrategy({
     clientID: process.env.GITHUB_APP_ID,
     clientSecret: process.env.GITHUB_APP_SECRET,
-    callbackURL: `http://localhost:4000${routes.githubCallback}`
+    callbackURL: `https://cafe-choice.herokuapp.com${routes.githubCallback}`
     }, 
     githubLoginCallback
     )
@@ -19,7 +19,7 @@ passport.use(new GithubStrategy({
 passport.use(new KakaoStrategy({
     clientID: process.env.KAKAO_APP_ID,
     clientSecret: process.env.KAKAO_APP_SECRET,
-    callbackURL: `http://localhost:4000${routes.kakaoCallback}`
+    callbackURL: `https://cafe-choice.herokuapp.com${routes.kakaoCallback}`
     }, 
     kakaoLoginCallback
     )
