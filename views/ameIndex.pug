@@ -8,11 +8,11 @@ block content
             p.lead 아메지수는 주변 카페들의 아메리카노 가격의 평균을 내어 물가 수준을 나타내는 하나의 지표입니다.
              <p class="card-text"><small class="text-muted">막대를 클릭하시면 해당 카페 정보로 이동합니다.</small></p>
             each item in cafes
-                -var x=item.menu[0].price*100/(ameindex*2) 
+                -var x=item.menu[0].subcat[0].price*100/(ameindex*2) 
                 
                 a(href=routes.cafeDetail(item.id))
                     div(class="progress", style="height: 35px;")
-                        div(class="progress-bar", role="progressbar", style=`width:`+x+'%;', aria-valuenow=x, aria-valuemin="0", aria-valuemax="100") #{`${item.name} ${item.menu[0].price}원`}
+                        div(class="progress-bar", role="progressbar", style=`width:`+x+'%;', aria-valuenow=x, aria-valuemin="0", aria-valuemax="100") #{`${item.name} ${item.menu[0].subcat[0].price}원`}
                     br
         
     

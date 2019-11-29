@@ -3,9 +3,10 @@ mixin menu(cafe = {})
     .container
         h1.display-4 메뉴판
         div(class="cafeInfo__menu col-12 container" style="max-width: 1280px;")
-            ul.list-unstyled.row
-                each item in cafe.menu
-                    li.list-item.col-3.border-top.py-2
-                        for i=0 i<item.menu.length i++
-                            span #{i}
-                            span.cafeInfo__menuItem.h6=`${item.name} ${item.price}원`
+            ul.list-unstyled
+                each menu in cafe.menu
+                    if menu.subcat.length != 0
+                        p.lead #{menu.category}
+                        li.list-item.col-3.border-top.py-2
+                            each subcat in menu.subcat
+                                p.cafeInfo__menuItem.h6=`${subcat.name} ${subcat.price}원`
