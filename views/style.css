@@ -79,11 +79,26 @@
 
 .icon{
     margin-top : 2%;
-    margin-bottom : 5%;
+    margin-bottom : 2%;
+    margin-left : 2%;
     color:rgba(94, 94, 94, 0.877);
     text-shadow: 0 0 1px rgb(49, 49, 49);
 
 }
+
+.tag{
+
+    /* background-color : #EDBB99;
+    color: rgb(49, 49, 49);
+    border-radius: 30px;
+    font-size: 80%;
+    font-weight: 400;
+    padding-top: 2px;
+    padding-bottom: 2px; */
+    margin-right : 2px;
+    display: inline-block;
+    
+} 
 
 .header__mainLogo{
     color : rgb(56, 56, 56);
@@ -244,4 +259,16 @@ html, body {
 .cafe__comment-set{
     margin-top: 5%;
     margin-right:10%;
+}
+
+
+.margin-top-3{
+    margin-top:3%;
+}
+
+.container_2{
+    display : none;
+}
+
+.deleteBtn :not(){
 }

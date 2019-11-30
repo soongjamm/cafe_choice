@@ -1,0 +1,25 @@
+{ 
+    "_id" : "5XG5iV61x2IiJHeoCfgPiZnEFVuxPfPy", 
+    "expires" : ISODate("2019-12-12T17:40:25.607+0000"), 
+    "session" : "{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"httpOnly\":true,\"path\":\"/\"},\"passport\":{\"user\":\"asddas@asddas\"}}"
+}
+{ 
+    "_id" : "tyDuaSJ6Qfowb_YWnKFOduZNLooSkOci", 
+    "expires" : ISODate("2019-12-13T12:56:26.257+0000"), 
+    "session" : "{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"httpOnly\":true,\"path\":\"/\"},\"passport\":{\"user\":\"kimstz0303@gmail.com\"}}"
+}
+{ 
+    "_id" : "nCiN7-0SdeMgan_eSceqOOXCQjEIF1mn", 
+    "expires" : ISODate("2019-12-13T12:56:49.479+0000"), 
+    "session" : "{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"httpOnly\":true,\"path\":\"/\"},\"passport\":{}}"
+}
+{ 
+    "_id" : "A_DCGr19qXvBcjdAu9x2djuacD7rhg6X", 
+    "expires" : ISODate("2019-12-13T18:46:09.390+0000"), 
+    "session" : "{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"httpOnly\":true,\"path\":\"/\"},\"passport\":{\"user\":\"admin@admin\"}}"
+}
+{ 
+    "_id" : "YL4nn8oSA2qvMs1jX-saWGk23Q4SZ5bc", 
+    "expires" : ISODate("2019-12-14T09:26:22.984+0000"), 
+    "session" : "{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"httpOnly\":true,\"path\":\"/\"},\"passport\":{\"user\":\"kimstz0303@gmail.com\"}}"
+}

@@ -4,7 +4,8 @@ import routes from "../routes"
 import { getLogin, postLogin, logout, getJoin, postJoin, 
     githubLogin, postGithubLogin, kakaoLogin, postKakaoLogin, facebookLogin, postFacebookLogin}  from "../Controllers/userController";
 import { home, search, conditionalSearch, ameIndex, postConditionalSearch, listAll, 
-    getAddComment, postAddComment, getDeleteComment, postDeleteComment } from "../Controllers/cafeController";
+    getAddComment, postAddComment, getDeleteComment, postDeleteComment 
+    , hashTag} from "../Controllers/cafeController";
 import { onlyPublic , onlyPrivate} from "../middlewares";
 const globalRouter = express.Router();
 
@@ -58,6 +59,7 @@ globalRouter.post(routes.conditionalSearch, postConditionalSearch);
 
 globalRouter.get(routes.ameIndex, ameIndex);
 
+globalRouter.get(routes.hashTag, hashTag);
 
 
 

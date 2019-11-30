@@ -47,12 +47,23 @@ export const map = (req, res) =>{
     res.send("this is map");
 }
 
+export const hashTag = async (req, res) => {
+    // 태그 내용 받아오기
+    const { query: tmp} = req;
+    let tag = Object.keys(tmp);
+    tag= tag[0];
+
+    const cafes = await Cafe.find( {"tag" : {$regex : tag}});
+    console.log(cafes)
+    res.render("hashTag", {pageTitle: "#", cafes, tag});
+}
+
 export const search = async (req, res) =>{
+    console.log(Object.keys(req.query));
     const {
         query: { term: searchingBy }
     } = req;
-    const cafes = await Cafe.find({ $or: [{"name" : {$regex: searchingBy}}, {'menu.subcat.name' : {$regex: searchingBy}}]});
-    // const cafes = await Cafe.find({"name" : {$regex: searchingBy}});
+    const cafes = await Cafe.find({ $or: [{"name" : {$regex: searchingBy}}, {"tag": {$regex : searchingBy}}, {'menu.subcat.name' : {$regex: searchingBy}}]});
     res.render("search", {pageTitle: "search", searchingBy, cafes});
 }
 
@@ -71,7 +82,7 @@ export const postConditionalSearch = async (req, res) => {
     if(cafes != ""){
         sel2 = selection.map( x => {var tmp = cafes[0].amenities.filter(y => 
             { if(y.name == x){
-                console.log(y.amen, x);
+                // console.log(y.amen, x);
                 return Object.values(y.amen);
             }
         } )
@@ -156,7 +167,25 @@ export const getDeleteComment = (req, res) => {
 }
 
 export const postDeleteComment = (req, res) => {
-    console.log("여기다", req);
+    const {
+        body : {commentid, cafeid}
+    } = req;
+    console.log(commentid, cafeid);
+
+    try{
+        Cafe.findOne({'_id' : cafeid}, function(err, cafe){
+            for(var i = 0; i<=cafe.comments.length; i++){
+                if(String(cafe.comments[i] == String(commentid))){
+                    cafe.comments.remove(commentid);
+                    cafe.save();
+                }
+            }
+        })
+        res.redirect(routes.cafeDetail(cafeid));
+    }catch(error){
+        console.log(error);
+    }
+
     // const { 
     //     headers : {referer},
     //     body : { review : comment},

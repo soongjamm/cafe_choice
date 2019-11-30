@@ -1,0 +1,14 @@
+{ 
+    "_id" : ObjectId("5de2292ad94d940023fc30fe"), 
+    "text" : "ㅡㅡ", 
+    "creator" : ObjectId("5ddfdf1a8f0d9a0023a030e4"), 
+    "createdAt" : ISODate("2019-11-30T08:32:42.646+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5de22b90807cc900239a9272"), 
+    "text" : "긴 리뷰 쓰기이이이이이긴 리뷰 쓰기이이이이이긴 리뷰 쓰기이이이이이긴 리뷰 쓰기이이이이이긴 리뷰 쓰기이이이이이긴 리뷰 쓰기이이이이이긴 리뷰 쓰기이이이이이긴 리뷰 쓰기이이이이이긴 리뷰 쓰기이이이이이긴 리뷰 쓰기이이이이이", 
+    "creator" : ObjectId("5ddfdf1a8f0d9a0023a030e4"), 
+    "createdAt" : ISODate("2019-11-30T08:42:56.692+0000"), 
+    "__v" : NumberInt(0)
+}

@@ -4,7 +4,11 @@ include mixins/searchedBlock
 block content
     .search
         br
-        p.display-4.container #{searchingBy}(으)로 검색한 결과입니다.
+        if cafes != ""
+            p.display-4.container #{searchingBy}(으)로 검색한 결과입니다.
+        else 
+            p.display-4.container #{searchingBy}의 검색결과가 없습니다.
+
 
         each item in cafes
             +searchedBlock({
@@ -15,6 +19,7 @@ block content
                 amenities : item.amenities,
                 menu : item.menu,
                 branch : item. branch,
-                comments : item.comments
+                comments : item.comments,
+                tag : item.tag
             })
         

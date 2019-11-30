@@ -1,9 +1,13 @@
 extends layouts/main
 include mixins/cafeBlock
 
-
 block content
-    .listAll
+
+   
+    .listAll.margin-top-3
+        h1.btn.btn-dark ##{tag}
+        br
+
         .card-columns
             each item in cafes
                 +cafeBlock({

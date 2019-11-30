@@ -42,10 +42,11 @@ block content
                         span.cafe__createdAt.small #{(comment.createdAt).toDateString()} 
                         span.cafe__creator.h6 #{comment.creator.name}
                         if comment.creator.id == user.id
-                            hidden(name=comment.id)
-                            span.cafe__comment-icons 
-                                i.xi-pen-o
-                                i.xi-close
+                            form(action=routes.deleteComment, method="post")
+                                span.cafe__comment-icons
+                                    button(class="xi-close ", name="commentid", value=comment.id)
+                                    input(type="hidden", name="cafeid", value=cafe.id)
+                                //- i.xi-pen-o
                         p.cafe__comment.small.rounded=comment.text
                         br
         else

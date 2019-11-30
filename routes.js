@@ -31,6 +31,8 @@ const FB_CALLBACK = "/auth/facebook/callback";
 const ADD_COMMENT = "/comment"
 const DELETE_COMMENT = "/deleteComment"
 
+const HASH_TAG = "/hashtag"
+
 
 //routes object
 const routes = {
@@ -68,7 +70,8 @@ const routes = {
     // facebook : FB,
     // facebookCallback : FB_CALLBACK
     addComment : ADD_COMMENT,
-    deleteComment : DELETE_COMMENT
+    deleteComment : DELETE_COMMENT,
+    hashTag : HASH_TAG
 }
 
 export default routes;

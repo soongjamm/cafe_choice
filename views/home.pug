@@ -1,12 +1,22 @@
 extends layouts/main
 include mixins/userInfo
+include mixins/cafeBlock
 
 
 block content
+    script(type="text/javascript").
+        function display() {
+            let tmp = document.querySelector(".container_2");
+            if(tmp.style.display == "none")
+                tmp.style = "display : block";
+            else
+                tmp.style = "display : none";
+        }
     .home.container
         .row
             .col
-                p.btn.btn-danger 오늘의 추천카페
+                btn(class="btn btn-danger", onclick="display();") 오늘의 추천카페 
+                span.small (클릭하시면 한번에 보실 수 있습니다.)
                 <div class="bd-example ">
                     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
                         ol.carousel-indicators
@@ -59,5 +69,20 @@ block content
                 p.__4.small.animated.fadeInUp.delay-3s 리뷰, 평점, 지도, 메뉴판 제공
 
 
+    .home.container_2
+        .card-columns
+            each item in cafes
+                +cafeBlock({
+                    id : item.id,
+                    name : item.name,
+                    location : item.location,
+                    imageUrl : item.imageUrl,
+                    amenities : item.amenities,
+                    menu : item.menu,
+                    latlng : item.latlng,
+                    branch : item.branch,
+                    comments : item.comments,
+                    tag : item.tag
+                })
 
                 

@@ -1,0 +1,2700 @@
+{ 
+    "_id" : ObjectId("5dd816f84b874a79061a198d"), 
+    "name" : "명지카페", 
+    "imageUrl" : "https://myongjiblog.files.wordpress.com/2017/06/ebaa85.jpg?w=620", 
+    "location" : "경기도 용인시 처인구 중앙동 산82-2 (학생회관 앞)", 
+    "latlng" : {
+        "lat" : 37.223372, 
+        "lng" : 127.187261
+    }, 
+    "menu" : [
+        {
+            "category" : "coffee", 
+            "subcat" : [
+                {
+                    "name" : "아메리카노", 
+                    "price" : "1800"
+                }, 
+                {
+                    "name" : "에소프레소", 
+                    "price" : "1500"
+                }, 
+                {
+                    "name" : "아이스 아메리카노", 
+                    "price" : "1800"
+                }, 
+                {
+                    "name" : "카페라떼", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "카푸치노", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "카페모카", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "카라멜 라떼", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "헤즐넛 라떼", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "바닐라 라떼", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "화이트 카페모카", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "카라멜 카페모카", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "카라멜 마끼야또", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "아이리시 라떼", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "자바칩 프라페", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "코코넛 스무디 커피", 
+                    "price" : "3800"
+                }
+            ]
+        }, 
+        {
+            "category" : "non-coffee", 
+            "subcat" : [
+                {
+                    "name" : "핫초코", 
+                    "price" : "2200"
+                }, 
+                {
+                    "name" : "ICE 초코", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "화이트 초코", 
+                    "price" : "2200"
+                }, 
+                {
+                    "name" : "ICE 화이트초코", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "그린티 라떼", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "차이티 라떼", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "고구마 라떼", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "스팀 밀크", 
+                    "price" : "1300"
+                }, 
+                {
+                    "name" : "민트 초코", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "블루베리 라떼", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "마른밤 라떼", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "코코넛 라떼", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "매실 라떼", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "쿠키앤크림 프라페", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "순코코넛 스무디", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "요거트 스무디", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "복숭아 아이스티", 
+                    "price" : "2000"
+                }, 
+                {
+                    "name" : "레몬 아이스티", 
+                    "price" : "2000"
+                }, 
+                {
+                    "name" : "케모마일", 
+                    "price" : "1800"
+                }, 
+                {
+                    "name" : "페퍼민트", 
+                    "price" : "1800"
+                }, 
+                {
+                    "name" : "자스민", 
+                    "price" : "1800"
+                }, 
+                {
+                    "name" : "얼그레이 홍차", 
+                    "price" : "1800"
+                }, 
+                {
+                    "name" : "유기농 녹차", 
+                    "price" : "1800"
+                }, 
+                {
+                    "name" : "히비스 커스", 
+                    "price" : "1800"
+                }, 
+                {
+                    "name" : "유자청/자몽청/레몬청", 
+                    "price" : "1800"
+                }, 
+                {
+                    "name" : "매실차", 
+                    "price" : "2200"
+                }, 
+                {
+                    "name" : "유자차", 
+                    "price" : "2200"
+                }, 
+                {
+                    "name" : "아이스 매실차", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "아이스 유자차", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "흑당 버블 라떼", 
+                    "price" : "3500"
+                }, 
+                {
+                    "name" : "흑당 버블 그린티", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "흑당 버블 블랙티", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "오곡 라떼", 
+                    "price" : "3000"
+                }
+            ]
+        }, 
+        {
+            "category" : "dessert", 
+            "subcat" : [
+                {
+                    "name" : "쿠키/머핀", 
+                    "price" : "1800"
+                }, 
+                {
+                    "name" : "허니버터 브레드", 
+                    "price" : "2800"
+                }
+            ]
+        }, 
+        {
+            "category" : "juice", 
+            "subcat" : [
+                {
+                    "name" : "딸기 바나나(딸바)", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "키위 바나나(키바)", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "쵸코 바나나(쵸바)", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "바나나 파인트(바파)", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "오렌지 파인(오파)", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "바나나 쥬스", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "딸기 쥬스", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "오렌지 쥬스", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "토마토 쥬스", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "적포도 쥬스", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "청도포 쥬스", 
+                    "price" : "3000"
+                }
+            ]
+        }, 
+        {
+            "category" : "ade", 
+            "subcat" : [
+                {
+                    "name" : "레몬 에이드", 
+                    "price" : "2000"
+                }, 
+                {
+                    "name" : "체리 에이드", 
+                    "price" : "2000"
+                }
+            ]
+        }
+    ], 
+    "amenities" : [
+        {
+            "amen" : "흡연실", 
+            "icon" : "fas fa-smoking", 
+            "name" : "smoking"
+        }, 
+        {
+            "amen" : "주차장", 
+            "icon" : "fas fa-car-side", 
+            "name" : "parking"
+        }, 
+        {
+            "amen" : "테라스", 
+            "icon" : "fas fa-umbrella-beach", 
+            "name" : "terrace"
+        }
+    ], 
+    "branch" : "용인명지대점"
+}
+{ 
+    "_id" : ObjectId("5dd819d64b874a79061a19fc"), 
+    "name" : "커피베이", 
+    "imageUrl" : "https://i.imgur.com/2bwxvge.jpg", 
+    "location" : "경기도 용인시 처인구 역북동 605-12", 
+    "latlng" : {
+        "lat" : 37.226783, 
+        "lng" : 127.187427
+    }, 
+    "menu" : [
+        {
+            "category" : "coffee", 
+            "subcat" : [
+                {
+                    "name" : "아메리카노", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "에스프레소 프라노베", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "모카 프라노베", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "에스프레소", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "카페라떼", 
+                    "price" : "3300"
+                }, 
+                {
+                    "name" : "카푸치노", 
+                    "price" : "3300"
+                }, 
+                {
+                    "name" : "바닐라라떼", 
+                    "price" : "3700"
+                }, 
+                {
+                    "name" : "카라멜라떼", 
+                    "price" : "3700"
+                }, 
+                {
+                    "name" : "카페모카", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "민트모카", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "카라멜마끼아또", 
+                    "price" : "4000"
+                }
+            ]
+        }, 
+        {
+            "category" : "non-coffee", 
+            "subcat" : [
+                {
+                    "name" : "자몽티", 
+                    "price" : "3300"
+                }, 
+                {
+                    "name" : "라임티", 
+                    "price" : "3300"
+                }, 
+                {
+                    "name" : "레몬티", 
+                    "price" : "3300"
+                }, 
+                {
+                    "name" : "얼그레이 클래식", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "머스캣", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "스트로베리 민트", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "루이보스 슈가블럽", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "유자차", 
+                    "price" : "3300"
+                }, 
+                {
+                    "name" : "토마토 쥬스", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "키위 쥬스", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "딸기 쥬스", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "아이스티", 
+                    "price" : "3300"
+                }, 
+                {
+                    "name" : "카라멜 프라노베", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "초코 프라노베", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "넛츠 프라노베", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "그린티 프라노베", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "자바칩 프라노베", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "쿠키앤크림 프라노베", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "플레인 요거프라노베", 
+                    "price" : "4300"
+                }, 
+                {
+                    "name" : "딸기 요거프라노베", 
+                    "price" : "4300"
+                }, 
+                {
+                    "name" : "블루베리 요거프라노베", 
+                    "price" : "4300"
+                }, 
+                {
+                    "name" : "초콜릿 밀크", 
+                    "price" : "2800"
+                }, 
+                {
+                    "name" : "민트 초콜릿", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "밀크티", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "그린티 라떼", 
+                    "price" : "3300"
+                }, 
+                {
+                    "name" : "고구마 라떼", 
+                    "price" : "3300"
+                }, 
+                {
+                    "name" : "레드벨벳 라떼", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "스팀 밀크", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "딸기 스무벨라", 
+                    "price" : "4500"
+                }, 
+                {
+                    "name" : "망고 스무벨라", 
+                    "price" : "4500"
+                }, 
+                {
+                    "name" : "키위 스무벨라", 
+                    "price" : "4500"
+                }, 
+                {
+                    "name" : "베리베리 스무벨라", 
+                    "price" : "4500"
+                }
+            ]
+        }, 
+        {
+            "category" : "dessert", 
+            "subcat" : [
+
+            ]
+        }, 
+        {
+            "category" : "ade", 
+            "subcat" : [
+                {
+                    "name" : "레몬 에이드", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "자몽 에이드", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "라임 에이드", 
+                    "price" : "3800"
+                }
+            ]
+        }, 
+        {
+            "category" : "juice", 
+            "subcat" : [
+
+            ]
+        }
+    ], 
+    "amenities" : [
+        {
+            "amen" : "콘센트", 
+            "icon" : "fas fa-plug", 
+            "name" : "plug"
+        }, 
+        {
+            "amen" : "충전기", 
+            "icon" : "fas fa-battery-half", 
+            "name" : "charger"
+        }, 
+        {
+            "amen" : "와이파이", 
+            "icon" : "fas fa-wifi", 
+            "name" : "wifi"
+        }, 
+        {
+            "amen" : "주차장", 
+            "icon" : "fas fa-car-side", 
+            "name" : "parking"
+        }, 
+        {
+            "amen" : "흡연실", 
+            "icon" : "fas fa-smoking", 
+            "name" : "smoking"
+        }, 
+        {
+            "amen" : "내부 화장실", 
+            "icon" : "fas fa-restroom", 
+            "name" : "restroom"
+        }
+    ], 
+    "branch" : "용인역북점"
+}
+{ 
+    "_id" : ObjectId("5dd818f94b874a79061a19d5"), 
+    "name" : "투썸플레이스 ", 
+    "imageUrl" : "https://i.imgur.com/hM2PG2N.jpg", 
+    "location" : "경기도 용인시 처인구 역북동 명지로 60번길 8-10", 
+    "latlng" : {
+        "lat" : 37.231789, 
+        "lng" : 127.18816
+    }, 
+    "menu" : [
+        {
+            "category" : "coffee", 
+            "subcat" : [
+                {
+                    "name" : "아메리카노/ 롱블랙", 
+                    "price" : "4100"
+                }, 
+                {
+                    "name" : "스페니쉬 연유 라떼", 
+                    "price" : "5600"
+                }, 
+                {
+                    "name" : "카라멜 마키아또", 
+                    "price" : "5600"
+                }, 
+                {
+                    "name" : "티라미수 라떼", 
+                    "price" : "5800"
+                }, 
+                {
+                    "name" : "바닐라 라떼/ 카페모카", 
+                    "price" : "5100"
+                }, 
+                {
+                    "name" : "카페라떼/카푸치노/숏라떼", 
+                    "price" : "4600"
+                }, 
+                {
+                    "name" : "시그니처 라떼", 
+                    "price" : "4600"
+                }, 
+                {
+                    "name" : "에스프레소", 
+                    "price" : "3300"
+                }, 
+                {
+                    "name" : "콜드브루", 
+                    "price" : "4500"
+                }, 
+                {
+                    "name" : "콜드브루 라떼", 
+                    "price" : "5000"
+                }, 
+                {
+                    "name" : "바닐라 아포카토", 
+                    "price" : "5500"
+                }
+            ]
+        }, 
+        {
+            "category" : "non-coffee", 
+            "subcat" : [
+                {
+                    "name" : "유자 레몬티", 
+                    "price" : "5500"
+                }, 
+                {
+                    "name" : "오렌지 자몽티", 
+                    "price" : "5500"
+                }, 
+                {
+                    "name" : "키위 바나나 주스", 
+                    "price" : "5800"
+                }, 
+                {
+                    "name" : "망고 바나나 라떼", 
+                    "price" : "6000"
+                }, 
+                {
+                    "name" : "요거/ 스트로베리 피치 프라페", 
+                    "price" : "5800"
+                }, 
+                {
+                    "name" : "제주 말차 프라페", 
+                    "price" : "5800"
+                }, 
+                {
+                    "name" : "망고 프라페", 
+                    "price" : "5300"
+                }, 
+                {
+                    "name" : "로얄 밀크티 쉐이크", 
+                    "price" : "6300"
+                }, 
+                {
+                    "name" : "커피프라페-카라멜, 모카칩", 
+                    "price" : "5300"
+                }, 
+                {
+                    "name" : "밀크쉐이크- 바닐라, 초코, 커피", 
+                    "price" : "5500"
+                }, 
+                {
+                    "name" : "고구마 라떼", 
+                    "price" : "5200"
+                }, 
+                {
+                    "name" : "초콜릿 라떼", 
+                    "price" : "4800"
+                }, 
+                {
+                    "name" : "블루베리 요거트 드링크", 
+                    "price" : "5000"
+                }, 
+                {
+                    "name" : "플레인 요거트 드링크", 
+                    "price" : "4500"
+                }, 
+                {
+                    "name" : "1837 블랙티", 
+                    "price" : "5100"
+                }, 
+                {
+                    "name" : "프렌치 얼그레이", 
+                    "price" : "5100"
+                }, 
+                {
+                    "name" : "그나와 민트티", 
+                    "price" : "5100"
+                }, 
+                {
+                    "name" : "카모마일", 
+                    "price" : "5100"
+                }, 
+                {
+                    "name" : "크림 카라멜", 
+                    "price" : "5100"
+                }, 
+                {
+                    "name" : "애플 민트티", 
+                    "price" : "6100"
+                }, 
+                {
+                    "name" : "허니레몬 티", 
+                    "price" : "6100"
+                }, 
+                {
+                    "name" : "버블 밀크티", 
+                    "price" : "6000"
+                }, 
+                {
+                    "name" : "버블 그린티 라떼", 
+                    "price" : "5700"
+                }, 
+                {
+                    "name" : "로얄 밀크티", 
+                    "price" : "5500"
+                }, 
+                {
+                    "name" : "그린티 라떼", 
+                    "price" : "5000"
+                }
+            ]
+        }, 
+        {
+            "category" : "dessert", 
+            "subcat" : [
+                {
+                    "name" : "소프트 아이스크림(컵/콘)", 
+                    "price" : "3500"
+                }, 
+                {
+                    "name" : "망고 아이스크림 콘 빙수", 
+                    "price" : "13000"
+                }, 
+                {
+                    "name" : "초코 아이스크림 콘 빙수", 
+                    "price" : "12500"
+                }, 
+                {
+                    "name" : "베리 아이스크림 콘 빙수", 
+                    "price" : "12500"
+                }, 
+                {
+                    "name" : "오리지널 팥빙수", 
+                    "price" : "10500"
+                }
+            ]
+        }, 
+        {
+            "category" : "ade", 
+            "subcat" : [
+                {
+                    "name" : "레몬 셔벗 레이드", 
+                    "price" : "6500"
+                }, 
+                {
+                    "name" : "오렌지/ 자몽 에이드", 
+                    "price" : "5500"
+                }, 
+                {
+                    "name" : "상그리아 에이드", 
+                    "price" : "6000"
+                }
+            ]
+        }, 
+        {
+            "category" : "juice", 
+            "subcat" : [
+
+            ]
+        }
+    ], 
+    "amenities" : [
+        {
+            "amen" : "콘센트", 
+            "icon" : "fas fa-plug", 
+            "name" : "plug"
+        }, 
+        {
+            "amen" : "충전기", 
+            "icon" : "fas fa-battery-half", 
+            "name" : "charger"
+        }, 
+        {
+            "amen" : "와이파이", 
+            "icon" : "fas fa-wifi", 
+            "name" : "wifi"
+        }, 
+        {
+            "amen" : "주차장", 
+            "icon" : "fas fa-car-side", 
+            "name" : "parking"
+        }, 
+        {
+            "amen" : "흡연실", 
+            "icon" : "fas fa-smoking", 
+            "name" : "smoking"
+        }, 
+        {
+            "amen" : "내부 화장실", 
+            "icon" : "fas fa-restroom", 
+            "name" : "restroom"
+        }
+    ], 
+    "branch" : "용인역북점"
+}
+{ 
+    "_id" : ObjectId("5dd817944b874a79061a1998"), 
+    "name" : "블루포트", 
+    "imageUrl" : "https://i.imgur.com/r6C7NXO.jpg", 
+    "location" : "경기도 용인시 처인구 중앙동 명지로 116 (복지관)", 
+    "latlng" : {
+        "lat" : 37.222953, 
+        "lng" : 127.186851
+    }, 
+    "menu" : [
+        {
+            "category" : "coffee", 
+            "subcat" : [
+                {
+                    "name" : "블루포트 더블 샷 아메리카노", 
+                    "price" : "1800"
+                }, 
+                {
+                    "name" : "에스프레소", 
+                    "price" : "1800"
+                }, 
+                {
+                    "name" : "스페셜 아메리카노", 
+                    "price" : "2800"
+                }, 
+                {
+                    "name" : "헤이즐넛", 
+                    "price" : "2400"
+                }, 
+                {
+                    "name" : "카페라떼", 
+                    "price" : "2700"
+                }, 
+                {
+                    "name" : "카푸치노", 
+                    "price" : "2700"
+                }, 
+                {
+                    "name" : "카페라떼(바닐라/카라멜/헤이즐넛)", 
+                    "price" : "3100"
+                }, 
+                {
+                    "name" : "카페모카(다크/카라멜)", 
+                    "price" : "3400"
+                }, 
+                {
+                    "name" : "카라멜마끼야또", 
+                    "price" : "3400"
+                }
+            ]
+        }, 
+        {
+            "category" : "non-coffee", 
+            "subcat" : [
+                {
+                    "name" : "허브티(자스민/케모마일/페퍼민트/로즈마리)", 
+                    "price" : "1800"
+                }, 
+                {
+                    "name" : "홍차(잉글리쉬블랙퍼스트/얼그레이/다즐링)", 
+                    "price" : "1500"
+                }, 
+                {
+                    "name" : "레몬/자몽/유자차", 
+                    "price" : "2200"
+                }, 
+                {
+                    "name" : "녹차", 
+                    "price" : "1800"
+                }, 
+                {
+                    "name" : "대추차/진저티", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "히비스커스", 
+                    "price" : "2000"
+                }, 
+                {
+                    "name" : "히비스커스(레몬/유자)", 
+                    "price" : "2700"
+                }, 
+                {
+                    "name" : "피치 아이스티", 
+                    "price" : "2000"
+                }, 
+                {
+                    "name" : "엘리자베스 스페셜 티", 
+                    "price" : "2700"
+                }, 
+                {
+                    "name" : "엘리자베스(레몬/딸기)", 
+                    "price" : "3500"
+                }, 
+                {
+                    "name" : "다크 초콜릿 라떼", 
+                    "price" : "2700"
+                }, 
+                {
+                    "name" : "그린티 라떼", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "고구마 라떼", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "12곡 라떼", 
+                    "price" : "2200"
+                }, 
+                {
+                    "name" : "민트초코 라떼", 
+                    "price" : "3200"
+                }, 
+                {
+                    "name" : "죠리퐁 라떼", 
+                    "price" : "3900"
+                }, 
+                {
+                    "name" : "한방대추/허니진저 라떼", 
+                    "price" : "3900"
+                }, 
+                {
+                    "name" : "허니레몬 진저 라떼", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "민트 초코", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "요거트 스무디(플레인/딸기/블루베리/키위", 
+                    "price" : "3700"
+                }, 
+                {
+                    "name" : "프라페(모카/카라멜)", 
+                    "price" : "3900"
+                }, 
+                {
+                    "name" : "프라페(자바칩/민트초코/쿠앤크/그린티)", 
+                    "price" : "3900"
+                }, 
+                {
+                    "name" : "타로 버블티", 
+                    "price" : "3800"
+                }
+            ]
+        }, 
+        {
+            "category" : "dessert", 
+            "subcat" : [
+
+            ]
+        }, 
+        {
+            "category" : "ade", 
+            "subcat" : [
+                {
+                    "name" : "에이드(레몬/자몽/청포도)", 
+                    "price" : "2700"
+                }, 
+                {
+                    "name" : "블루레몬 프리미엄 에이드", 
+                    "price" : "3200"
+                }, 
+                {
+                    "name" : "한라봉 프리미엄 에이드", 
+                    "price" : "3200"
+                }
+            ]
+        }, 
+        {
+            "category" : "juice", 
+            "subcat" : [
+                {
+                    "name" : "쥬스(딸기/바나나/키위)", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "쥬스(딸기바나나,키위바나나,초코바나나)", 
+                    "price" : "4000"
+                }
+            ]
+        }
+    ], 
+    "amenities" : [
+        {
+            "amen" : "콘센트", 
+            "icon" : "fas fa-plug", 
+            "name" : "plug"
+        }, 
+        {
+            "amen" : "와이파이", 
+            "icon" : "fas fa-wifi", 
+            "name" : "wifi"
+        }
+    ], 
+    "branch" : "용인명지대점", 
+    "__v" : NumberInt(2), 
+    "comments" : [
+        ObjectId("5de2292ad94d940023fc30fe"), 
+        ObjectId("5de22b90807cc900239a9272")
+    ]
+}
+{ 
+    "_id" : ObjectId("5dd817d54b874a79061a19a3"), 
+    "name" : "메가커피", 
+    "imageUrl" : "https://i.imgur.com/bIurOWL.jpg", 
+    "location" : "경기도 용인시 처인구 명지로60번길 8-4", 
+    "latlng" : {
+        "lat" : 37.231151, 
+        "lng" : 127.187246
+    }, 
+    "menu" : [
+        {
+            "category" : "coffee", 
+            "subcat" : [
+                {
+                    "name" : "아메리카노", 
+                    "price" : "1500"
+                }, 
+                {
+                    "name" : "헤이즐넛아메리카노", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "바닐라아메리카노", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "꿀아메리카노", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "메가리카노", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "콜드브루", 
+                    "price" : "3300"
+                }, 
+                {
+                    "name" : "콜드브루라떼", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "콜드브루 스톰", 
+                    "price" : "4300"
+                }, 
+                {
+                    "name" : "카페 라떼", 
+                    "price" : "2700"
+                }, 
+                {
+                    "name" : "카푸치노", 
+                    "price" : "2700"
+                }, 
+                {
+                    "name" : "바닐라라떼, 헤이즐넛라떼", 
+                    "price" : "3200"
+                }, 
+                {
+                    "name" : "카라멜 마끼아또", 
+                    "price" : "3500"
+                }, 
+                {
+                    "name" : "카페모카", 
+                    "price" : "3700"
+                }, 
+                {
+                    "name" : "연유 라떼", 
+                    "price" : "3700"
+                }, 
+                {
+                    "name" : "티라미수라떼", 
+                    "price" : "3900"
+                }, 
+                {
+                    "name" : "큐브라떼", 
+                    "price" : "3900"
+                }, 
+                {
+                    "name" : "민트카페모카", 
+                    "price" : "4500"
+                }
+            ]
+        }, 
+        {
+            "category" : "non-coffee", 
+            "subcat" : [
+                {
+                    "name" : "핫초코/아이스초코", 
+                    "price" : "3200"
+                }, 
+                {
+                    "name" : "민트크림초코", 
+                    "price" : "3500"
+                }, 
+                {
+                    "name" : "메가초코", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "오레오초코", 
+                    "price" : "3900"
+                }, 
+                {
+                    "name" : "곡물 라떼", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "녹차라떼", 
+                    "price" : "3200"
+                }, 
+                {
+                    "name" : "딸기라떼", 
+                    "price" : "3500"
+                }, 
+                {
+                    "name" : "로얄밀크티/고구마라떼", 
+                    "price" : "3500"
+                }, 
+                {
+                    "name" : "토피넛라떼", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "스트로베리 큐브라떼", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "플레인 퐁크러쉬", 
+                    "price" : "3900"
+                }, 
+                {
+                    "name" : "딸기 퐁크러쉬", 
+                    "price" : "3900"
+                }, 
+                {
+                    "name" : "바나나 퐁크러쉬", 
+                    "price" : "3900"
+                }, 
+                {
+                    "name" : "플레인 요거트 스무디", 
+                    "price" : "3900"
+                }, 
+                {
+                    "name" : "딸기 요거트 스무디", 
+                    "price" : "3900"
+                }, 
+                {
+                    "name" : "망고 요거트 스무디", 
+                    "price" : "3900"
+                }, 
+                {
+                    "name" : "쿠키/민트 프라페", 
+                    "price" : "3900"
+                }, 
+                {
+                    "name" : "녹차/리얼초코/커피 프라페", 
+                    "price" : "3900"
+                }, 
+                {
+                    "name" : "스트로베리 치즈홀릭", 
+                    "price" : "4500"
+                }, 
+                {
+                    "name" : "유니콘프라페", 
+                    "price" : "4800"
+                }
+            ]
+        }, 
+        {
+            "category" : "dessert", 
+            "subcat" : [
+
+            ]
+        }, 
+        {
+            "category" : "ade", 
+            "subcat" : [
+                {
+                    "name" : "체리콕", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "자몽 에이드", 
+                    "price" : "3500"
+                }, 
+                {
+                    "name" : "레몬/블루레몬 에이드", 
+                    "price" : "3500"
+                }, 
+                {
+                    "name" : "청포도 에이드", 
+                    "price" : "3500"
+                }, 
+                {
+                    "name" : "매직 에이드(핑크/블루)", 
+                    "price" : "3500"
+                }, 
+                {
+                    "name" : "메가 에이드(레몬+자몽+라임)", 
+                    "price" : "3900"
+                }, 
+                {
+                    "name" : "라임 모히또", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "청포도 모히또", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "자몽 모히또", 
+                    "price" : "3800"
+                }
+            ]
+        }, 
+        {
+            "category" : "juice", 
+            "subcat" : [
+
+            ]
+        }
+    ], 
+    "amenities" : [
+        {
+            "amen" : "콘센트", 
+            "icon" : "fas fa-plug", 
+            "name" : "plug"
+        }, 
+        {
+            "amen" : "와이파이", 
+            "icon" : "fas fa-wifi", 
+            "name" : "wifi"
+        }, 
+        {
+            "amen" : "내부 화장실", 
+            "icon" : "fas fa-restroom", 
+            "name" : "restroom"
+        }
+    ], 
+    "branch" : "용인역북점"
+}
+{ 
+    "_id" : ObjectId("5dd817d54b874a79061a19a4"), 
+    "name" : "창 카페", 
+    "imageUrl" : "https://i.imgur.com/yMZwjWz.jpg", 
+    "location" : "경기도 용인시 처인구 명지로60번길 33-4", 
+    "latlng" : {
+        "lat" : 37.229384, 
+        "lng" : 127.185846
+    }, 
+    "menu" : [
+        {
+            "category" : "coffee", 
+            "subcat" : [
+                {
+                    "name" : "아메리카노", 
+                    "price" : "3500"
+                }, 
+                {
+                    "name" : "아인슈페너", 
+                    "price" : "6500"
+                }, 
+                {
+                    "name" : "플랫화이트", 
+                    "price" : "6000"
+                }
+            ]
+        }, 
+        {
+            "category" : "non-coffee", 
+            "subcat" : [
+                {
+                    "name" : "제주녹차라떼", 
+                    "price" : "6000"
+                }, 
+                {
+                    "name" : "딸기라떼(ice)", 
+                    "price" : "6500"
+                }, 
+                {
+                    "name" : "아보카도쉐이크", 
+                    "price" : "7500"
+                }, 
+                {
+                    "name" : "tea(hot)", 
+                    "price" : "6000"
+                }, 
+                {
+                    "name" : "과일 수제 요거트", 
+                    "price" : "6000"
+                }, 
+                {
+                    "name" : "바닐라크림라떼", 
+                    "price" : "6000"
+                }, 
+                {
+                    "name" : "카카오라떼", 
+                    "price" : "6000"
+                }, 
+                {
+                    "name" : "딸기차(hot)", 
+                    "price" : "6500"
+                }
+            ]
+        }, 
+        {
+            "category" : "dessert", 
+            "subcat" : [
+                {
+                    "name" : "수제티라미슈", 
+                    "price" : "7000"
+                }
+            ]
+        }, 
+        {
+            "category" : "ade", 
+            "subcat" : [
+                {
+                    "name" : "레몬에이드", 
+                    "price" : "7000"
+                }
+            ]
+        }, 
+        {
+            "category" : "juice", 
+            "subcat" : [
+                {
+                    "name" : "생자몽쥬스", 
+                    "price" : "7000"
+                }
+            ]
+        }
+    ], 
+    "amenities" : [
+        {
+            "amen" : "콘센트", 
+            "icon" : "fas fa-plug", 
+            "name" : "plug"
+        }, 
+        {
+            "amen" : "충전기", 
+            "icon" : "fas fa-battery-half", 
+            "name" : "charger"
+        }, 
+        {
+            "amen" : "와이파이", 
+            "icon" : "fas fa-wifi", 
+            "name" : "wifi"
+        }, 
+        {
+            "amen" : "주차장", 
+            "icon" : "fas fa-car-side", 
+            "name" : "parking"
+        }, 
+        {
+            "amen" : "내부 화장실", 
+            "icon" : "fas fa-restroom", 
+            "name" : "restroom"
+        }
+    ], 
+    "branch" : "용인역북점"
+}
+{ 
+    "_id" : ObjectId("5dd8180c4b874a79061a19af"), 
+    "name" : "빽다방", 
+    "imageUrl" : "https://i.imgur.com/AgOaF1f.jpg", 
+    "location" : "경기도 용인시 처인구 명지로60번길 8-13", 
+    "latlng" : {
+        "lat" : 37.231749, 
+        "lng" : 127.187506
+    }, 
+    "menu" : [
+        {
+            "category" : "coffee", 
+            "subcat" : [
+                {
+                    "name" : "앗!메리카노", 
+                    "price" : "1500"
+                }, 
+                {
+                    "name" : "더블 에스프레소", 
+                    "price" : "1500"
+                }, 
+                {
+                    "name" : "달달원유라떼", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "빽's라떼", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "바닐라라떼", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "카페모카", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "카라멜마키아또", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "크리미모카라뗴", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "커스터드라떼", 
+                    "price" : "4000"
+                }
+            ]
+        }, 
+        {
+            "category" : "non-coffee", 
+            "subcat" : [
+                {
+                    "name" : "완전딸기바나나 빽스치노", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "완전초코바나나 뺵스치노", 
+                    "price" : "2800"
+                }, 
+                {
+                    "name" : "녹차 빽스치노", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "원조 빽스치노", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "피스타치오 빽스치노", 
+                    "price" : "4500"
+                }, 
+                {
+                    "name" : "민트초코 빽스치노", 
+                    "price" : "3500"
+                }, 
+                {
+                    "name" : "플레인요거트스무디", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "딸기요거트스무디", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "완전초코", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "녹차라떼", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "꿀밤라떼", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "19곡라떼", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "버터스카치라떼", 
+                    "price" : "3500"
+                }, 
+                {
+                    "name" : "토피넛라떼/민트초코라떼", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "딸기크림라떼", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "블랙펄라떼", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "블랙펄라떼/블랙펄밀크티", 
+                    "price" : "3500"
+                }, 
+                {
+                    "name" : "밀크티", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "깔라만시티", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "달콤아이스티", 
+                    "price" : "2000"
+                }, 
+                {
+                    "name" : "페퍼민트/레몬머틀/피치우롱티", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "레몬얼그레이티", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "오렌지자몽블랙티", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "레몬티/유자티/자몽티", 
+                    "price" : "3500"
+                }, 
+                {
+                    "name" : "청포도플라워", 
+                    "price" : "3500"
+                }, 
+                {
+                    "name" : "아이스미초(석류)", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "완전파인애플", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "완전망고", 
+                    "price" : "3500"
+                }, 
+                {
+                    "name" : "완전딸기/완전아보카도", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "아보카노바나나/아보카도초코", 
+                    "price" : "4500"
+                }
+            ]
+        }, 
+        {
+            "category" : "dessert", 
+            "subcat" : [
+                {
+                    "name" : "노말한소프트(토핑 초콜릿/카라멜 + 500)", 
+                    "price" : "1500"
+                }, 
+                {
+                    "name" : "옥수크림", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "호두크런치", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "빽엔나", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "사라다빵", 
+                    "price" : "2000"
+                }, 
+                {
+                    "name" : "소세지빵", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "크리미슈", 
+                    "price" : "1500"
+                }, 
+                {
+                    "name" : "크리미단팥빵", 
+                    "price" : "1500"
+                }, 
+                {
+                    "name" : "계란사라다빵", 
+                    "price" : "3500"
+                }
+            ]
+        }, 
+        {
+            "category" : "ade", 
+            "subcat" : [
+                {
+                    "name" : "깔라만시에이드/블루캔디소다", 
+                    "price" : "3000"
+                }
+            ]
+        }, 
+        {
+            "category" : "juice", 
+            "subcat" : [
+
+            ]
+        }
+    ], 
+    "amenities" : [
+        {
+            "amen" : "콘센트", 
+            "icon" : "fas fa-plug", 
+            "name" : "plug"
+        }, 
+        {
+            "amen" : "충전기", 
+            "icon" : "fas fa-battery-half", 
+            "name" : "charger"
+        }, 
+        {
+            "amen" : "와이파이", 
+            "icon" : "fas fa-wifi", 
+            "name" : "wifi"
+        }, 
+        {
+            "amen" : "주차장", 
+            "icon" : "fas fa-car-side", 
+            "name" : "parking"
+        }, 
+        {
+            "amen" : "내부 화장실", 
+            "icon" : "fas fa-restroom", 
+            "name" : "restroom"
+        }
+    ], 
+    "branch" : "용인역북남부점"
+}
+{ 
+    "_id" : ObjectId("5dd8180c4b874a79061a19b0"), 
+    "name" : "우주라이크 커피 ", 
+    "imageUrl" : "https://i.imgur.com/RU0qEFg.jpg", 
+    "location" : "경기도 용인시 처인구 역북동 명지로 60번길 8-12", 
+    "latlng" : {
+        "lat" : 37.231422, 
+        "lng" : 127.187389
+    }, 
+    "menu" : [
+        {
+            "category" : "coffee", 
+            "subcat" : [
+                {
+                    "name" : "아메리캔", 
+                    "price" : "2000"
+                }, 
+                {
+                    "name" : "콜드브루", 
+                    "price" : "3200"
+                }, 
+                {
+                    "name" : "카푸치노", 
+                    "price" : "3200"
+                }, 
+                {
+                    "name" : "카페라떼", 
+                    "price" : "3200"
+                }, 
+                {
+                    "name" : "바닐라라떼", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "카페모카", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "카라멜 마끼아또", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "유자메리카노", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "연유커피", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "텀블리카노", 
+                    "price" : "7000"
+                }, 
+                {
+                    "name" : "텀블리라떼", 
+                    "price" : "8000"
+                }
+            ]
+        }, 
+        {
+            "category" : "non-coffee", 
+            "subcat" : [
+                {
+                    "name" : "잎차밀크티", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "초콜릿라떼", 
+                    "price" : "3000"
+                }, 
+                {
+                    "name" : "그린티라떼", 
+                    "price" : "3500"
+                }, 
+                {
+                    "name" : "오곡라떼", 
+                    "price" : "3500"
+                }, 
+                {
+                    "name" : "플레인요거트스무디", 
+                    "price" : "3900"
+                }, 
+                {
+                    "name" : "딸기요거트스무디", 
+                    "price" : "3900"
+                }, 
+                {
+                    "name" : "망고요거트스무디", 
+                    "price" : "3900"
+                }, 
+                {
+                    "name" : "블루베리요거트스무디", 
+                    "price" : "3900"
+                }, 
+                {
+                    "name" : "과일스무디(딸기,토마토,블루베리,망고)", 
+                    "price" : "3900"
+                }, 
+                {
+                    "name" : "딸기바나나스무디", 
+                    "price" : "4300"
+                }, 
+                {
+                    "name" : "자몽유차스무디", 
+                    "price" : "4300"
+                }, 
+                {
+                    "name" : "자바칩 우주프라페", 
+                    "price" : "4500"
+                }, 
+                {
+                    "name" : "그린티 우주프라페", 
+                    "price" : "4500"
+                }, 
+                {
+                    "name" : "애플시나몬", 
+                    "price" : "3300"
+                }, 
+                {
+                    "name" : "얼그레이", 
+                    "price" : "3300"
+                }, 
+                {
+                    "name" : "스트로베리", 
+                    "price" : "3300"
+                }, 
+                {
+                    "name" : "바닐라피치", 
+                    "price" : "3300"
+                }, 
+                {
+                    "name" : "캐모마일", 
+                    "price" : "3300"
+                }, 
+                {
+                    "name" : "페퍼민트", 
+                    "price" : "3300"
+                }, 
+                {
+                    "name" : "프룻프베리", 
+                    "price" : "3300"
+                }, 
+                {
+                    "name" : "에너지티", 
+                    "price" : "3800"
+                }
+            ]
+        }, 
+        {
+            "category" : "dessert", 
+            "subcat" : [
+                {
+                    "name" : "우유스크림 Cone", 
+                    "price" : "2000"
+                }
+            ]
+        }, 
+        {
+            "category" : "ade", 
+            "subcat" : [
+                {
+                    "name" : "청포도에이드", 
+                    "price" : "3300"
+                }, 
+                {
+                    "name" : "복숭아에이드", 
+                    "price" : "3300"
+                }, 
+                {
+                    "name" : "자몽에이드", 
+                    "price" : "3300"
+                }, 
+                {
+                    "name" : "망고에이드", 
+                    "price" : "3300"
+                }, 
+                {
+                    "name" : "자몽오렌지에이드", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "탄산수 레몬", 
+                    "price" : "900"
+                }, 
+                {
+                    "name" : "탄산수 라임", 
+                    "price" : "900"
+                }
+            ]
+        }, 
+        {
+            "category" : "juice", 
+            "subcat" : [
+
+            ]
+        }
+    ], 
+    "amenities" : [
+        {
+            "amen" : "콘센트", 
+            "icon" : "fas fa-plug", 
+            "name" : "plug"
+        }, 
+        {
+            "amen" : "충전기", 
+            "icon" : "fas fa-battery-half", 
+            "name" : "charger"
+        }, 
+        {
+            "amen" : "와이파이", 
+            "icon" : "fas fa-wifi", 
+            "name" : "wifi"
+        }, 
+        {
+            "amen" : "주차장", 
+            "icon" : "fas fa-car-side", 
+            "name" : "parking"
+        }, 
+        {
+            "amen" : "내부 화장실", 
+            "icon" : "fas fa-restroom", 
+            "name" : "restroom"
+        }
+    ], 
+    "branch" : "용인명지대점"
+}
+{ 
+    "_id" : ObjectId("5dd8180c4b874a79061a19b1"), 
+    "name" : "할리스커피 ", 
+    "imageUrl" : "https://i.imgur.com/nbRTIFj.jpg", 
+    "location" : "경기도 용인시 처인구 중앙동 명지로116번길 24-2", 
+    "latlng" : {
+        "lat" : 37.225185, 
+        "lng" : 127.187186
+    }, 
+    "menu" : [
+        {
+            "category" : "coffee", 
+            "subcat" : [
+                {
+                    "name" : "프리미엄 블렌드 아메리카노", 
+                    "price" : "4500"
+                }, 
+                {
+                    "name" : "프리미엄 블렌드 딥라떼", 
+                    "price" : "5000"
+                }, 
+                {
+                    "name" : "리스트레또 딜라이트", 
+                    "price" : "5400"
+                }, 
+                {
+                    "name" : "아포가토", 
+                    "price" : "5800"
+                }, 
+                {
+                    "name" : "카페 아메리카노", 
+                    "price" : "4100"
+                }, 
+                {
+                    "name" : "카페라떼", 
+                    "price" : "4600"
+                }, 
+                {
+                    "name" : "카푸치노", 
+                    "price" : "4600"
+                }, 
+                {
+                    "name" : "바닐라 딜라이트", 
+                    "price" : "5400"
+                }, 
+                {
+                    "name" : "카라멜 마키아또", 
+                    "price" : "5500"
+                }, 
+                {
+                    "name" : "카페 모카", 
+                    "price" : "5100"
+                }, 
+                {
+                    "name" : "콜브브루", 
+                    "price" : "4500"
+                }, 
+                {
+                    "name" : "콜드브루 라떼", 
+                    "price" : "5000"
+                }, 
+                {
+                    "name" : "크림라떼(티라미스/그린티/밀크티)", 
+                    "price" : "5900"
+                }, 
+                {
+                    "name" : "스위트 크림라떼", 
+                    "price" : "5500"
+                }, 
+                {
+                    "name" : "콜드브루 할리치노", 
+                    "price" : "5500"
+                }, 
+                {
+                    "name" : "콜드브루 모카 할리치노", 
+                    "price" : "5700"
+                }
+            ]
+        }, 
+        {
+            "category" : "non-coffee", 
+            "subcat" : [
+                {
+                    "name" : "민트초코", 
+                    "price" : "5500"
+                }, 
+                {
+                    "name" : "리얼 벨지안 초코", 
+                    "price" : "5900"
+                }, 
+                {
+                    "name" : "화이트 초코", 
+                    "price" : "5200"
+                }, 
+                {
+                    "name" : "핫초코/아이스초코", 
+                    "price" : "4900"
+                }, 
+                {
+                    "name" : "그린티/밀크티 라떼", 
+                    "price" : "5800"
+                }, 
+                {
+                    "name" : "복숭아 얼그레이", 
+                    "price" : "5500"
+                }, 
+                {
+                    "name" : "유자 캐모마일", 
+                    "price" : "5500"
+                }, 
+                {
+                    "name" : "제주 한라봉 감귤차/고흥 유자차", 
+                    "price" : "4800"
+                }, 
+                {
+                    "name" : "스퀴즈 레몬차/홍자몽차", 
+                    "price" : "5300"
+                }, 
+                {
+                    "name" : "해남 녹차", 
+                    "price" : "4300"
+                }, 
+                {
+                    "name" : "얼그레이/캐모마일/페퍼민트", 
+                    "price" : "4300"
+                }, 
+                {
+                    "name" : "피치우롱/히비스커스 블렌드", 
+                    "price" : "4300"
+                }, 
+                {
+                    "name" : "고구마 라떼", 
+                    "price" : "5500"
+                }, 
+                {
+                    "name" : "딸기 치즈케익 할리치노", 
+                    "price" : "5900"
+                }, 
+                {
+                    "name" : "민트 초코 할리치노", 
+                    "price" : "5700"
+                }, 
+                {
+                    "name" : "다크 초코칩 할리치노", 
+                    "price" : "6100"
+                }, 
+                {
+                    "name" : "그린티/밀크티 할리치노", 
+                    "price" : "5900"
+                }, 
+                {
+                    "name" : "요거트 할리치노(플레인/블루베리)", 
+                    "price" : "5700"
+                }, 
+                {
+                    "name" : "과일채소 착즙 주스", 
+                    "price" : "5500"
+                }, 
+                {
+                    "name" : "과일채소 찾즙 스무디(청포도케일/오렌지파인/비트사과)", 
+                    "price" : "5900"
+                }, 
+                {
+                    "name" : "과일 스무디(딸기/망고/오렌지)", 
+                    "price" : "5700"
+                }, 
+                {
+                    "name" : "스파클링(청포도/자몽파인/복숭아자두/더블베리)", 
+                    "price" : "5700"
+                }
+            ]
+        }, 
+        {
+            "category" : "dessert", 
+            "subcat" : [
+
+            ]
+        }, 
+        {
+            "category" : "ade", 
+            "subcat" : [
+
+            ]
+        }, 
+        {
+            "category" : "juice", 
+            "subcat" : [
+
+            ]
+        }
+    ], 
+    "amenities" : [
+        {
+            "amen" : "콘센트", 
+            "icon" : "fas fa-plug", 
+            "name" : "plug"
+        }, 
+        {
+            "amen" : "충전기", 
+            "icon" : "fas fa-battery-half", 
+            "name" : "charger"
+        }, 
+        {
+            "amen" : "와이파이", 
+            "icon" : "fas fa-wifi", 
+            "name" : "wifi"
+        }, 
+        {
+            "amen" : "내부 화장실", 
+            "icon" : "fas fa-restroom", 
+            "name" : "restroom"
+        }
+    ], 
+    "branch" : "용인명지대점"
+}
+{ 
+    "_id" : ObjectId("5dd8180c4b874a79061a19b2"), 
+    "name" : "카페 모노비", 
+    "imageUrl" : "https://i.imgur.com/1iaQxKM.jpg", 
+    "location" : "경기도 용인시 처인구 역북동 598-11", 
+    "latlng" : {
+        "lat" : 37.229406, 
+        "lng" : 127.187401
+    }, 
+    "menu" : [
+        {
+            "category" : "coffee", 
+            "subcat" : [
+                {
+                    "name" : "아메리카노", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "에스프레소", 
+                    "price" : "3500"
+                }, 
+                {
+                    "name" : "마끼야또", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "콘파냐", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "카페라떼", 
+                    "price" : "4300"
+                }, 
+                {
+                    "name" : "바닐라라떼", 
+                    "price" : "4800"
+                }, 
+                {
+                    "name" : "카라멜 라떼", 
+                    "price" : "4800"
+                }, 
+                {
+                    "name" : "카푸치노", 
+                    "price" : "4300"
+                }, 
+                {
+                    "name" : "모카치노", 
+                    "price" : "4800"
+                }, 
+                {
+                    "name" : "카페모카", 
+                    "price" : "4800"
+                }, 
+                {
+                    "name" : "카라멜모카", 
+                    "price" : "4800"
+                }, 
+                {
+                    "name" : "화이트초콜릿모카", 
+                    "price" : "4800"
+                }, 
+                {
+                    "name" : "카라멜 마끼아또", 
+                    "price" : "4800"
+                }, 
+                {
+                    "name" : "아포카토", 
+                    "price" : "5500"
+                }, 
+                {
+                    "name" : "(카페모카/ 카라멜모카)", 
+                    "price" : "5500"
+                }
+            ]
+        }, 
+        {
+            "category" : "non-coffee", 
+            "subcat" : [
+                {
+                    "name" : "허브티(페퍼민트/캐모마일/베리타트)", 
+                    "price" : "450"
+                }, 
+                {
+                    "name" : "블랙티(얼그레이/잉글리쉬블랙퍼스트)", 
+                    "price" : "4500"
+                }, 
+                {
+                    "name" : "수제과일티(레몬/유자/자몽)", 
+                    "price" : "4500"
+                }, 
+                {
+                    "name" : "아이스티(복숭아/라즈베리)", 
+                    "price" : "4800"
+                }, 
+                {
+                    "name" : "초콜릿라떼", 
+                    "price" : "4500"
+                }, 
+                {
+                    "name" : "그린티 라떼", 
+                    "price" : "4500"
+                }, 
+                {
+                    "name" : "고구마하떼", 
+                    "price" : "4500"
+                }, 
+                {
+                    "name" : "토피넛라떼", 
+                    "price" : "4800"
+                }, 
+                {
+                    "name" : "로얄 밀크티", 
+                    "price" : "4800"
+                }, 
+                {
+                    "name" : "생과일에이드(블루레몬/유자/자몽/청포도)", 
+                    "price" : "4800"
+                }, 
+                {
+                    "name" : "스무디- 유자", 
+                    "price" : "5000"
+                }, 
+                {
+                    "name" : "애플망고", 
+                    "price" : "5500"
+                }, 
+                {
+                    "name" : "요거트플레인", 
+                    "price" : "5000"
+                }, 
+                {
+                    "name" : "요거트(딸기/키위/블루베리)", 
+                    "price" : "5500"
+                }, 
+                {
+                    "name" : "프라푸치노- (카라멜녹차/자바칩/쿠키앤크림)", 
+                    "price" : "5500"
+                }
+            ]
+        }, 
+        {
+            "category" : "dessert", 
+            "subcat" : [
+                {
+                    "name" : "베이글", 
+                    "price" : "2500"
+                }, 
+                {
+                    "name" : "타르트(에그/크림치즈/블루베리)", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "리얼 브라우니", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "크로크무슈 / 소시지프렛즐", 
+                    "price" : "4500"
+                }, 
+                {
+                    "name" : "허니브레드", 
+                    "price" : "6000"
+                }, 
+                {
+                    "name" : "와플 - 오리지널", 
+                    "price" : "8000"
+                }, 
+                {
+                    "name" : "아이스크림/ 스트로베리", 
+                    "price" : "12000"
+                }
+            ]
+        }, 
+        {
+            "category" : "ade", 
+            "subcat" : [
+
+            ]
+        }, 
+        {
+            "category" : "juice", 
+            "subcat" : [
+
+            ]
+        }
+    ], 
+    "amenities" : [
+        {
+            "amen" : "콘센트", 
+            "icon" : "fas fa-plug", 
+            "name" : "plug"
+        }, 
+        {
+            "amen" : "충전기", 
+            "icon" : "fas fa-battery-half", 
+            "name" : "charger"
+        }, 
+        {
+            "amen" : "와이파이", 
+            "icon" : "fas fa-wifi", 
+            "name" : "wifi"
+        }, 
+        {
+            "amen" : "주차장", 
+            "icon" : "fas fa-car-side", 
+            "name" : "parking"
+        }, 
+        {
+            "amen" : "흡연실", 
+            "icon" : "fas fa-smoking", 
+            "name" : "smoking"
+        }, 
+        {
+            "amen" : "내부 화장실", 
+            "icon" : "fas fa-restroom", 
+            "name" : "restroom"
+        }
+    ], 
+    "branch" : "용인역북점"
+}
+{ 
+    "_id" : ObjectId("5dd8198c4b874a79061a19f2"), 
+    "name" : "공차 ", 
+    "imageUrl" : "https://i.imgur.com/tzKeQwV.jpg", 
+    "location" : "경기도 용인시 처인구 역북동 748-2", 
+    "latlng" : {
+        "lat" : 37.235295, 
+        "lng" : 127.188559
+    }, 
+    "menu" : [
+        {
+            "category" : "coffee", 
+            "subcat" : [
+                {
+                    "name" : "아메리카노", 
+                    "price" : "3500"
+                }, 
+                {
+                    "name" : "얼그레이 아메리카노", 
+                    "price" : "3500"
+                }, 
+                {
+                    "name" : "커피 밀크티 크러쉬", 
+                    "price" : "4800"
+                }, 
+                {
+                    "name" : "더블 그린 카페라떼", 
+                    "price" : "4300"
+                }
+            ]
+        }, 
+        {
+            "category" : "non-coffee", 
+            "subcat" : [
+                {
+                    "name" : "자스민 그린티", 
+                    "price" : "3500"
+                }, 
+                {
+                    "name" : "우롱티", 
+                    "price" : "3500"
+                }, 
+                {
+                    "name" : "블랙티", 
+                    "price" : "3500"
+                }, 
+                {
+                    "name" : "얼그레이티", 
+                    "price" : "3500"
+                }, 
+                {
+                    "name" : "밀크폼 그린티", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "밀크폼 우롱티", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "밀크폼 블랙티", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "밀크폼 얼그레이티", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "밀크폼 윈터멜론티", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "그린 밀크티", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "우롱 밀크티", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "블랙 밀크티", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "얼그레이 밀크티", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "윈터멜론 밀크티", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "타로 밀크티", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "카라멜 밀크티", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "초콜릿 밀크티", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "차이 밀크티", 
+                    "price" : "4300"
+                }, 
+                {
+                    "name" : "망고 주스", 
+                    "price" : "4600"
+                }, 
+                {
+                    "name" : "망고 요구르트", 
+                    "price" : "5000"
+                }, 
+                {
+                    "name" : "레몬 요구르트", 
+                    "price" : "4500"
+                }, 
+                {
+                    "name" : "망고 망차 치포카토 스무디", 
+                    "price" : "5500"
+                }, 
+                {
+                    "name" : "망고 밀크 요거티", 
+                    "price" : "5100"
+                }, 
+                {
+                    "name" : "포토 쥬얼리 밀크티", 
+                    "price" : "5100"
+                }, 
+                {
+                    "name" : "포도 요거티 크러쉬", 
+                    "price" : "5300"
+                }, 
+                {
+                    "name" : "포도 그린티 스파클링", 
+                    "price" : "4500"
+                }, 
+                {
+                    "name" : "허니 레몬티", 
+                    "price" : "4300"
+                }, 
+                {
+                    "name" : "허니 자몽티", 
+                    "price" : "4300"
+                }, 
+                {
+                    "name" : "망고 스무디", 
+                    "price" : "5300"
+                }, 
+                {
+                    "name" : "초코 쿠앤크 스무디", 
+                    "price" : "4500"
+                }, 
+                {
+                    "name" : "밀크 쿠앤크 스무디", 
+                    "price" : "4000"
+                }, 
+                {
+                    "name" : "청포도 스무디", 
+                    "price" : "4800"
+                }, 
+                {
+                    "name" : "제주 그린티 스무디", 
+                    "price" : "5300"
+                }, 
+                {
+                    "name" : "레몬 요구르트 스무디", 
+                    "price" : "4800"
+                }, 
+                {
+                    "name" : "타로 스무디", 
+                    "price" : "4300"
+                }, 
+                {
+                    "name" : "블랙 밀크티 크러쉬", 
+                    "price" : "4800"
+                }
+            ]
+        }, 
+        {
+            "category" : "dessert", 
+            "subcat" : [
+
+            ]
+        }, 
+        {
+            "category" : "ade", 
+            "subcat" : [
+                {
+                    "name" : "자몽 그린티 에이드", 
+                    "price" : "4300"
+                }, 
+                {
+                    "name" : "망고 그린티 에이드", 
+                    "price" : "4300"
+                }, 
+                {
+                    "name" : "청포도 그린티 에이드", 
+                    "price" : "4300"
+                }, 
+                {
+                    "name" : "레몬 그린티 에이드", 
+                    "price" : "4300"
+                }
+            ]
+        }, 
+        {
+            "category" : "juice", 
+            "subcat" : [
+
+            ]
+        }
+    ], 
+    "amenities" : [
+        {
+            "amen" : "콘센트", 
+            "icon" : "fas fa-plug", 
+            "name" : "plug"
+        }, 
+        {
+            "amen" : "충전기", 
+            "icon" : "fas fa-battery-half", 
+            "name" : "charger"
+        }, 
+        {
+            "amen" : "와이파이", 
+            "name" : "wifi", 
+            "icon" : "fas fa-wifi"
+        }, 
+        {
+            "amen" : "주차장", 
+            "icon" : "fas fa-car-side", 
+            "name" : "parking"
+        }, 
+        {
+            "amen" : "내부 화장실", 
+            "icon" : "fas fa-restroom", 
+            "name" : "restroom"
+        }
+    ], 
+    "branch" : "용인역북점"
+}
+{ 
+    "_id" : ObjectId("5dd819d64b874a79061a19fb"), 
+    "name" : "데일리커피앤와플", 
+    "imageUrl" : "https://i.imgur.com/6W83wao.jpg", 
+    "location" : "경기도 용인시 처인구 명지로40번길 4 링크153 101호", 
+    "latlng" : {
+        "lat" : 37.232634, 
+        "lng" : 127.188115
+    }, 
+    "menu" : [
+        {
+            "category" : "coffee", 
+            "subcat" : [
+                {
+                    "name" : "아메리카노", 
+                    "price" : "2800"
+                }, 
+                {
+                    "name" : "카페 라떼", 
+                    "price" : "3200"
+                }, 
+                {
+                    "name" : "토피넛카페 라떼", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "바닐라 라떼", 
+                    "price" : "3300"
+                }
+            ]
+        }, 
+        {
+            "category" : "non-coffee", 
+            "subcat" : [
+                {
+                    "name" : "딸기라떼", 
+                    "price" : "4900"
+                }, 
+                {
+                    "name" : "그린티 라떼", 
+                    "price" : "3300"
+                }, 
+                {
+                    "name" : "자몽차", 
+                    "price" : "3300"
+                }, 
+                {
+                    "name" : "루이보스", 
+                    "price" : "2800"
+                }, 
+                {
+                    "name" : "바닐라쉐이크", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "녹차쉐이크", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "딸기요거트스무디", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "바닐라죠리퐁프라페", 
+                    "price" : "4900"
+                }, 
+                {
+                    "name" : "아이스티", 
+                    "price" : "2800"
+                }, 
+                {
+                    "name" : "오레오쉐이크", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "요거트스무디", 
+                    "price" : "3800"
+                }, 
+                {
+                    "name" : "오레오죠리퐁프라페", 
+                    "price" : "4900"
+                }
+            ]
+        }, 
+        {
+            "category" : "dessert", 
+            "subcat" : [
+                {
+                    "name" : "플레인와플", 
+                    "price" : "1900"
+                }, 
+                {
+                    "name" : "8달라 콤비와플", 
+                    "price" : "7900"
+                }
+            ]
+        }, 
+        {
+            "category" : "ade", 
+            "subcat" : [
+                {
+                    "name" : "라임청귤에이드", 
+                    "price" : "4900"
+                }, 
+                {
+                    "name" : "슈퍼베리에이드", 
+                    "price" : "4900"
+                }, 
+                {
+                    "name" : "리얼청포도에이드", 
+                    "price" : "4900"
+                }, 
+                {
+                    "name" : "리얼자몽에이드", 
+                    "price" : "4900"
+                }, 
+                {
+                    "name" : "크렌베리와인에이드", 
+                    "price" : "4900"
+                }
+            ]
+        }, 
+        {
+            "category" : "juice", 
+            "subcat" : [
+
+            ]
+        }
+    ], 
+    "amenities" : [
+        {
+            "amen" : "콘센트", 
+            "icon" : "fas fa-plug", 
+            "name" : "plug"
+        }, 
+        {
+            "amen" : "충전기", 
+            "icon" : "fas fa-battery-half", 
+            "name" : "charger"
+        }, 
+        {
+            "amen" : "와이파이", 
+            "icon" : "fas fa-wifi", 
+            "name" : "wifi"
+        }, 
+        {
+            "amen" : "주차장", 
+            "icon" : "fas fa-car-side", 
+            "name" : "parking"
+        }, 
+        {
+            "amen" : "내부 화장실", 
+            "icon" : "fas fa-restroom", 
+            "name" : "restroom"
+        }
+    ], 
+    "branch" : "용인역북점"
+}
