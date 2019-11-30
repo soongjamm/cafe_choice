@@ -1,6 +1,9 @@
 import passport from "passport";
 import routes from "../routes";
 import User from "../models/users";
+import Cafe from "../models/cafes";
+import { cafeDetail } from "./cafeController";
+import { localsMiddleware } from "../middlewares";
 
 export const getJoin = (req, res) =>{
     res.render("join", {pageTitle: "join"});
@@ -58,8 +61,12 @@ export const logout = (req, res) =>{
   res.redirect(routes.home);
 };
 
-export const userDetail = (req, res) =>{
-    res.send("this is user-Detail");
+export const userDetail = async (req, res) =>{
+  // 여기해줘야함
+  const cafes = await Cafe.find({ '_id' : {$in : req.user.like } });
+  console.log(cafes, "어디");
+    
+    res.render("userDetail", {pageTitle: "회원정보", cafes} );
 };
 
 export const editProfile = (req, res) =>{

@@ -2,7 +2,24 @@ mixin cafeBlock(cafe = {})
     div(class="card" style="min-width : 10rem; max-width: 25rem;")
         img(src=cafe.imageUrl class="card-img-top cafeBlock__thumbnail" alt="...")
         .card-body
-            h3.card-title #{cafe.name}
+            .form-inline
+                h3.card-title #{cafe.name}
+                if user
+                    -var bool = false
+                    each i in cafe.wholike
+                        if( user.id == i)
+                            -bool=true      
+                    if bool===true
+                        form(action=routes.like, method="post")
+                            button(class="xi-heart xi-border xi-x like", name="userid", value=user.id)
+                            span.small &nbsp;
+                            input(type="hidden", name="cafeid", value=cafe.id)
+                    else
+                        form(action=routes.like, method="post")
+                            button(class="xi-heart-o xi-border xi-x like", name="userid", value=user.id)
+                            span.small &nbsp;
+                            input(type="hidden", name="cafeid", value=cafe.id)
+
             p.small #{cafe.branch}
             h6.card-text #{cafe.location}
             ul.list-group.list-group-flush

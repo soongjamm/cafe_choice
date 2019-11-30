@@ -5,7 +5,7 @@ import { getLogin, postLogin, logout, getJoin, postJoin,
     githubLogin, postGithubLogin, kakaoLogin, postKakaoLogin, facebookLogin, postFacebookLogin}  from "../Controllers/userController";
 import { home, search, conditionalSearch, ameIndex, postConditionalSearch, listAll, 
     getAddComment, postAddComment, getDeleteComment, postDeleteComment 
-    , hashTag} from "../Controllers/cafeController";
+    , hashTag, getLike, postLike} from "../Controllers/cafeController";
 import { onlyPublic , onlyPrivate} from "../middlewares";
 const globalRouter = express.Router();
 
@@ -14,6 +14,10 @@ globalRouter.get(routes.addComment, getAddComment);
 globalRouter.post(routes.addComment, postAddComment);
 globalRouter.get(routes.deleteComment, getDeleteComment);
 globalRouter.post(routes.deleteComment, postDeleteComment);
+globalRouter.get(routes.like, getLike);
+globalRouter.post(routes.like, postLike);
+
+
 
 
 globalRouter.get(routes.listAll, listAll);

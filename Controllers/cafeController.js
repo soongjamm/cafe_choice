@@ -1,5 +1,6 @@
 import routes from "../routes";
 import Cafe from "../models/cafes";
+import User from "../models/users";
 import Comment from "../models/comments";
 import jsStringify from "js-stringify";
 
@@ -28,7 +29,7 @@ export const cafeDetail = async (req, res) =>{
             populate : { path: 'creator', select: 'name'}
         }).exec((err, data) => { 
             cafe=data;
-            console.log(cafe);
+            //console.log(cafe);
             res.render("cafeDetail", {pageTitle: "cafe Detail", jsStringify, cafe});
         });
         
@@ -45,6 +46,65 @@ export const cafeDetail = async (req, res) =>{
 export const map = (req, res) =>{
     
     res.send("this is map");
+}
+
+export const getLike = async (req, res) => {
+    const {
+        body : {userid, cafeid}
+    } = req;  
+    res.redirect(routes.cafeDetail(cafeid));
+}
+
+export const postLike = async(req, res) => {
+    console.log(req);
+    const {
+        body : {userid, cafeid}
+    } = req;    
+    console.log(userid, cafeid);
+    try{
+        User.findOne({'_id' : userid}, function(err, user){
+                if((user.like.indexOf(cafeid)==-1)){
+                    user.like.push(cafeid);
+                    console.log(user.like);
+                    user.save();
+                    Cafe.findOne({'_id' : cafeid}, function(err,cafe){
+                         if((cafe.wholike.indexOf(userid)==-1)){
+                            cafe.wholike.push(userid);
+                            cafe.save();
+                         }
+                    })
+                }else{
+                    user.like.remove(cafeid);
+                    console.log(user.like);
+                    user.save();
+                    Cafe.findOne({'_id' : cafeid}, function(err,cafe){
+                        if((cafe.wholike.indexOf(userid)!=-1)){
+                           cafe.wholike.remove(userid);
+                           cafe.save();
+                        }
+                   })
+                }
+                
+                res.redirect(req.headers.referer);
+
+        })
+    }catch(error){
+        console.log(error);
+    }
+    // console.log(user);
+    // if(배열에 카페id 똑같은거 없으면)
+    //     findbyid로 유저 가져와서, 유저 like배열에 카페id 넣어줌
+    //     그리고 save
+
+    //     try{
+    //         Cafe.findOne({'_id' : cafeid}, function(err, cafe){
+    //             for(var i = 0; i<=cafe.comments.length; i++){
+    //                 if(String(cafe.comments[i] == String(commentid))){
+    //                     cafe.comments.remove(commentid);
+    //                     cafe.save();
+    //                 }
+    //             }
+    //         })    
 }
 
 export const hashTag = async (req, res) => {

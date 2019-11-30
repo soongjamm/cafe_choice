@@ -9,6 +9,23 @@
     text-decoration: none;
 }
 
+.container__userDetail{
+    margin-top:3%;
+    margin-left:15%;
+    margin-right:15%;
+    padding-left:3%;
+    padding-right:3%;
+    padding-top:1%;
+    text-decoration: none;
+    background-color: #EBF5FB;
+    border-radius: 25px;
+    border : 2px solid white;
+}
+
+.userDetail-privacy{
+    margin-left : 3%;
+}
+
 .col-3{
     max-width: 100% !important;
 }
@@ -217,6 +234,10 @@
     width: 50%;
 }
 
+.center{
+    justify-content: center;
+    margin-bottom:2%;
+}
 
 /* Optional: Makes the sample page fill the window. */
 html, body {
@@ -251,8 +272,7 @@ html, body {
 }
 
 .cafe__createdAt{
-    float:right;
-    text-align: right;
+    /* float:right; */
     margin-right:10%;
 }
 
@@ -270,5 +290,21 @@ html, body {
     display : none;
 }
 
-.deleteBtn :not(){
+button {
+    display: inline;
+    border:0;
+    outline:0;
+
+}
+
+.goRight{
+    display: inline-block;
+    float: right;
+}
+
+.comment{
+}
+
+.like{
+    color:#E74C3C;
 }

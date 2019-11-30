@@ -47,6 +47,13 @@ const cafeSchema = new mongoose.Schema({
           ref: "Comment"
         }
       ],
+    
+    wholike : [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "User"
+        }
+    ],
     tag : [String]
 
 

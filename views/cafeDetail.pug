@@ -12,7 +12,9 @@ block content
         location : cafe.location,
         imageUrl : cafe.imageUrl, 
         menu : cafe.menu,
-        amenities : cafe.amenities
+        amenities : cafe.amenities,
+        tag : cafe.tag,
+        wholike : cafe.wholike
     })  
     
     //- a(href="#map.container2") 지도
@@ -34,18 +36,19 @@ block content
         p.cafe__comment-number #{cafe.comments.length} 개의 리뷰가 작성되었습니다.
         if(user)
             form(class="add__comment", action=routes.addComment, method="post")
-                input(type="text", size="100%", class="form-control-lg" name="review", placeholder="리뷰를 작성하세요.")
+                input(type="text", size="100%", class="form-control-lg comment" name="review", placeholder="리뷰를 작성하세요.")
                 button.btn.btn-dark 작성
             ul.cafe__comments-list
                 each comment in cafe.comments.reverse()
                     .cafe__comment-set
-                        span.cafe__createdAt.small #{(comment.createdAt).toDateString()} 
-                        span.cafe__creator.h6 #{comment.creator.name}
-                        if comment.creator.id == user.id
-                            form(action=routes.deleteComment, method="post")
-                                span.cafe__comment-icons
-                                    button(class="xi-close ", name="commentid", value=comment.id)
-                                    input(type="hidden", name="cafeid", value=cafe.id)
+                        form(action=routes.deleteComment, method="post" )
+                            span.cafe__creator.h6 #{comment.creator.name}
+                            .goRight
+                                span.cafe__createdAt.small #{(comment.createdAt).toDateString()} 
+                                if comment.creator.id == user.id
+                                    span.cafe__comment-icons
+                                        button(class="xi-close deleteBtn", name="commentid", value=comment.id)
+                                        input(type="hidden", name="cafeid", value=cafe.id)
                                 //- i.xi-pen-o
                         p.cafe__comment.small.rounded=comment.text
                         br

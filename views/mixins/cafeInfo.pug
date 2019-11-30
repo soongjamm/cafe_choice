@@ -4,13 +4,37 @@ mixin cafeInfo(cafe = {})
     .container
         .cafeInfo
             img.cafeInfo__thumbnail(class="rounded" src=cafe.imageUrl)
-            p.cafeInfo__name.display-4=cafe.name
+            .form-inline.center
+                p.cafeInfo__name.display-4=cafe.name
+                if user
+                    -var bool = false
+                    each i in cafe.wholike
+                        if( user.id == i)
+                            -bool=true      
+                    if bool===true
+                        form(action=routes.like, method="post")
+                            button(class="xi-heart xi-border xi-2x like", name="userid", value=user.id)
+                            span.small &nbsp;
+                            input(type="hidden", name="cafeid", value=cafe.id)
+                    else
+                        form(action=routes.like, method="post")
+                            button(class="xi-heart-o xi-border xi-2x like", name="userid", value=user.id)
+                            span.small &nbsp;
+                            input(type="hidden", name="cafeid", value=cafe.id)
             p.cafeInfo__location.lead=cafe.location
-            
+
+
             h5.cafeInfo__option
                 each item in cafe.amenities
                     i(class=item.icon).icon &nbsp; #{item.amen} &emsp;
-        br
+            br
+            h5.card-text.form-inline.center
+                each item in cafe.tag
+                    -var x=item
+                    form(action=routes.hashTag, method="get", class="center")
+                        span
+                            button(class="badge badge-dark tag", name=x) &emsp; ##{item} &emsp;
+
 
             
 
