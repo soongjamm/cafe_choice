@@ -25,7 +25,7 @@ export const cafeDetail = async (req, res) =>{
         let cafe;
         await Cafe.findById(id).populate({
             path : 'comments',
-            populate : { path: 'creator', select: 'name friends'}
+            populate : { path: 'creator', select: 'name'}
         }).exec((err, data) => { 
             cafe=data;
             console.log(cafe);
