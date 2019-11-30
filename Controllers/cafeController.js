@@ -1,5 +1,6 @@
 import routes from "../routes";
 import Cafe from "../models/cafes";
+import Comment from "../models/comments";
 import jsStringify from "js-stringify";
 
 // 추천카페 
@@ -21,9 +22,21 @@ export const cafeDetail = async (req, res) =>{
     }=req;
 
     try{
-        const cafe = await Cafe.findById(id);
-        res.render("cafeDetail", {pageTitle: "cafe Detail", jsStringify, cafe});
+        let cafe;
+        await Cafe.findById(id).populate({
+            path : 'comments',
+            populate : { path: 'creator', select: 'name friends'}
+        }).exec((err, data) => { 
+            cafe=data;
+            console.log(cafe);
+            res.render("cafeDetail", {pageTitle: "cafe Detail", jsStringify, cafe});
+        });
+        
+
+
+
     }catch(error){
+        console.log(error);
         res.redirect(routes.home);
     }
   
@@ -38,7 +51,7 @@ export const search = async (req, res) =>{
     const {
         query: { term: searchingBy }
     } = req;
-    const cafes = await Cafe.find({ $or: [{"name" : {$regex: searchingBy}}, {'menu.name' : {$regex: searchingBy}}]});
+    const cafes = await Cafe.find({ $or: [{"name" : {$regex: searchingBy}}, {'menu.subcat.name' : {$regex: searchingBy}}]});
     // const cafes = await Cafe.find({"name" : {$regex: searchingBy}});
     res.render("search", {pageTitle: "search", searchingBy, cafes});
 }
@@ -99,4 +112,74 @@ export const listAll = async (req, res) => {
         console.log(error);
         res.render("listAll", { pageTitle: "카페 전체보기", cafes: [] });
     }
+}
+
+// 리뷰 등록
+
+export const getAddComment = async(req,res) => {
+    res.redirect(routes.cafeDetail((req.headers.referer).split('/')[4]));
+}
+
+//내용,작성자id, 카페id
+export const postAddComment = async(req, res) => {
+    // console.log((req.headers.referer).split('/')[4], req.user.id);
+    const { 
+        headers : {referer},
+        body : { review : comment},
+        user
+    } = req;
+    const id = referer.split('/')[4];
+    console.log(user.id);
+    try{
+        const cafe = await Cafe.findById(id);
+        console.log("hi");
+        const newComment = await Comment.create({
+            text : comment,
+            creator : user.id 
+        })
+        console.log("hi");
+
+        cafe.comments.push(newComment.id);
+        cafe.save();
+    }catch(error){
+        res.status(400);
+    }finally{
+        res.redirect(routes.cafeDetail((req.headers.referer).split('/')[4]));
+
+        res.end();
+    }
+}
+
+// 리뷰 삭제
+export const getDeleteComment = (req, res) => {
+    res.redirect(routes.cafeDetail((req.headers.referer).split('/')[4]));
+}
+
+export const postDeleteComment = (req, res) => {
+    console.log("여기다", req);
+    // const { 
+    //     headers : {referer},
+    //     body : { review : comment},
+    //     user
+    // } = req;
+    // const id = referer.split('/')[4];
+    // console.log(user.id);
+    // try{
+    //     const cafe = await Cafe.findById(id);
+    //     console.log("hi");
+    //     const newComment = await Comment.create({
+    //         text : comment,
+    //         creator : user.id 
+    //     })
+    //     console.log("hi");
+
+    //     cafe.comments.push(newComment.id);
+    //     cafe.save();
+    // }catch(error){
+    //     res.status(400);
+    // }finally{
+    //     res.redirect(routes.cafeDetail((req.headers.referer).split('/')[4]));
+
+    //     res.end();
+    // }
 }

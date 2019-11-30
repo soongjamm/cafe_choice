@@ -102,3 +102,7 @@ dist
 
 # TernJS port file
 .tern-port
+
+
+# 히로쿠 디폴르이시 에러때문에
+package.json

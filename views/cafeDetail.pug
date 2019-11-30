@@ -15,12 +15,35 @@ block content
         amenities : cafe.amenities
     })  
     
+    //- a(href="#map.container2") 지도
+    //- a(href="#cafe__comments") 리뷰
+
     +map({
         id : cafe.id,
         latlng : cafe.latlng
-    })
+    })#map.container2
+
 
     +menu({
         id : cafe.id,
         menu : cafe.menu
     })
+
+
+    .cafe__comments.container
+        p.cafe__comment-number #{cafe.comments.length} 개의 리뷰가 작성되었습니다.
+        form(class="add__comment", action=routes.addComment, method="post")
+            input(type="text", size="100%", class="form-control-lg" name="review", placeholder="리뷰를 작성하세요.")
+            button.btn.btn-dark 작성
+        ul.cafe__comments-list
+            each comment in cafe.comments.reverse()
+                .cafe__comment-set
+                    span.cafe__createdAt.small #{(comment.createdAt).toDateString()} 
+                    span.cafe__creator.h6 #{comment.creator.name}
+                    if comment.creator.id == user.id
+                        hidden(name=comment.id)
+                        span.cafe__comment-icons 
+                            i.xi-pen-o
+                            i.xi-close
+                    p.cafe__comment.small.rounded=comment.text
+                    br

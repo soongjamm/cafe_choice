@@ -9,7 +9,8 @@
     text-decoration: none;
 }
 
-.lead.small.display-1, .display-2, .display-3, .display-4{
+.col-3{
+    max-width: 100% !important;
 }
 
 /* 홈화면 */
@@ -139,14 +140,25 @@
 }
 
 .cafeInfo__menuItem{
+    margin-top: 2%;
     margin-right : 2%;
     margin-left : 2%;
-    width: 10em;
+    /* width: 10em; */
 }
 
 .cafeInfo__menu{
-    border: 2px solid black ;
+    border: 2px solid rgb(209, 129, 23) ;
     padding-bottom : 10px;
+    /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDPvaC0bVfxjnahVeojfwHswGiV_8Jpu4ZfuHzm0AeuXbpsjCE&s'); */
+    color: rgba(49, 49, 49, 0.815);
+}
+
+.menu__cat{
+    padding-top: 2%;
+    padding-left: 5%;
+    margin-top: 2%;
+    border-top: 1px solid #dee2e6!important;
+    color: rgb(66, 65, 62);
 }
 
 .cafeInfo__thumbnail{
@@ -170,7 +182,7 @@
     animation-duration: 2s;
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 605px){
     .navbar > ul{
         display: none;
     }
@@ -185,6 +197,7 @@
 
 /* Google Map */
 #map {
+    /* display:none; */
     height: 190px;
     width: 50%;
 }
@@ -195,4 +208,39 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+}
+
+.marginbottm-2{
+    margin-bottom: 2%;
+}
+/* 리뷰 */
+.cafe__comment-number{
+    margin-top:2%;
+}
+.cafe__comment{
+    margin: 0%;
+    padding: 2%;
+    padding-right:15%;
+    background-color: #F7DC6F;
+
+}
+
+.cafe__comment-icons > i{
+    margin-right : 1%;
+    float:right;
+}
+
+.cafe__comments-list{
+    padding-top:3%;
+    margin-right:5%;
+}
+
+.cafe__createdAt{
+    float:right;
+    text-align: right;
+    margin-right:10%;
+}
+
+.cafe__comment-set{
+    margin-top: 5%;
 }

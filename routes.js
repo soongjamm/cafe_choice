@@ -18,7 +18,6 @@ const CHANGE_PASSWORD = "/change-password";
 const CAFES = "/cafes";
 const CAFE_DETAIL = "/:id";
 const MAP = "/map";
-const REVIEW_ADD = "/review-add";
 
 // Social login
 const GITHUB = "/auth/github";
@@ -27,6 +26,10 @@ const KAKAO = "/auth/kakao";
 const KAKAO_CALLBACK = "/auth/kakao/callback";
 const FB = "/auth/facebook";
 const FB_CALLBACK = "/auth/facebook/callback";
+
+
+const ADD_COMMENT = "/comment"
+const DELETE_COMMENT = "/deleteComment"
 
 
 //routes object
@@ -58,19 +61,14 @@ const routes = {
         }
     },
     map : MAP,
-    reviewAdd : id => {
-        if(id){
-            return `/cafes${REVIEW_ADD}`;
-        }else{
-            return REVIEW_ADD;
-        }
-    },
     github : GITHUB,
     githubCallback : GITHUB_CALLBACK,
     kakao : KAKAO,
     kakaoCallback : KAKAO_CALLBACK,
     // facebook : FB,
     // facebookCallback : FB_CALLBACK
+    addComment : ADD_COMMENT,
+    deleteComment : DELETE_COMMENT
 }
 
 export default routes;

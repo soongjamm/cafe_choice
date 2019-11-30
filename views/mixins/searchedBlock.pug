@@ -15,12 +15,12 @@ mixin searchedBlock(cafe = {})
                             h6.card-text=`${cafe.menu[0].subcat[0].name} ${cafe.menu[0].subcat[0].price}원 `
                                 span.badge.badge-warning 아메리카노
                             h6.card-text.small=`${cafe.menu[1].subcat[0].name} ${cafe.menu[1].subcat[0].price}원`
-                            h6.card-text.small=`${cafe.menu[2].subcat[0].name} ${cafe.menu[2].subcat[0].price}원`  
+                            //- h6.card-text.small=`${cafe.menu[2].subcat[0].name} ${cafe.menu[2].subcat[0].price}원`  
                     h5.card-text.icon
                         each item in cafe.amenities
                             i(class= item.icon) &nbsp; #{item.amen} &emsp;
-                    a(href=routes.cafeDetail(cafe.id) class="btn btn-primary")|자세히 보기
-                    <p class="card-text"><small class="text-muted">*개의 리뷰</small></p>
+                    a(href=routes.cafeDetail(cafe.id) class="btn btn-primary marginbottom-2")|자세히 보기
+                    <p class="card-text"><small class="text-muted">#{cafe.comments.length} 개의 리뷰가 작성되었습니다.</small></p>
                 </div>
                 </div>
             </div>

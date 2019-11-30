@@ -3,9 +3,17 @@ import passport from "passport";
 import routes from "../routes"
 import { getLogin, postLogin, logout, getJoin, postJoin, 
     githubLogin, postGithubLogin, kakaoLogin, postKakaoLogin, facebookLogin, postFacebookLogin}  from "../Controllers/userController";
-import { home, search, conditionalSearch, ameIndex, postConditionalSearch, listAll } from "../Controllers/cafeController";
+import { home, search, conditionalSearch, ameIndex, postConditionalSearch, listAll, 
+    getAddComment, postAddComment, getDeleteComment, postDeleteComment } from "../Controllers/cafeController";
 import { onlyPublic , onlyPrivate} from "../middlewares";
 const globalRouter = express.Router();
+
+
+globalRouter.get(routes.addComment, getAddComment);
+globalRouter.post(routes.addComment, postAddComment);
+globalRouter.get(routes.deleteComment, getDeleteComment);
+globalRouter.post(routes.deleteComment, postDeleteComment);
+
 
 globalRouter.get(routes.listAll, listAll);
 
@@ -49,6 +57,7 @@ globalRouter.get(routes.conditionalSearch, conditionalSearch);
 globalRouter.post(routes.conditionalSearch, postConditionalSearch);
 
 globalRouter.get(routes.ameIndex, ameIndex);
+
 
 
 

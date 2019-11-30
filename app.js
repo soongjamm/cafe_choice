@@ -1,7 +1,6 @@
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
 import express from "express";
-import flash from "req-flash";
 import helmet from "helmet";
 import morgan from "morgan";
 import mongoose from "mongoose";
@@ -22,6 +21,8 @@ const CokieStore = MongoStore(session);
 
 app.set("view engine", "pug");
 
+app.use("/static", express.static("static"));
+app.use('/views', express.static('views'));
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended : true}));

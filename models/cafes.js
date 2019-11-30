@@ -39,7 +39,15 @@ const cafeSchema = new mongoose.Schema({
     
     amenities : {
         type : [Object]
-    }
+    },
+
+    comments: [
+        {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "Comment"
+        }
+      ]
+
 
 
 });

@@ -2,11 +2,25 @@ mixin menu(cafe = {})
     br
     .container
         h1.display-4 메뉴판
-        div(class="cafeInfo__menu col-12 container" style="max-width: 1280px;")
-            ul.list-unstyled
-                each menu in cafe.menu
-                    if menu.subcat.length != 0
-                        p.lead #{menu.category}
-                        li.list-item.col-3.border-top.py-2
-                            each subcat in menu.subcat
-                                p.cafeInfo__menuItem.h6=`${subcat.name} ${subcat.price}원`
+        div(class="cafeInfo__menu rounded col-12 container" style="max-width: 1280px;")
+            -var x=0
+            -var y=0;
+            ul.list-unstyled.row
+                .col
+                    each menu in cafe.menu
+                        if menu.subcat.length&&x==3 || menu.subcat.length != 0 && x%2==0
+                            p.h3.menu__cat #{menu.category}
+                            li.list-item.col-3.border-top.py-2
+                                each subcat in menu.subcat
+                                    p.cafeInfo__menuItem.h6=`${subcat.name} ${subcat.price}원`
+                        -x++
+                        
+                                    
+                .col
+                    each menu in cafe.menu
+                        if   menu.subcat.length != 0 && y%2==1 &&y!=3
+                            p.h3.menu__cat #{menu.category}
+                            li.list-item.col-3.border-top.py-2
+                                each subcat in menu.subcat
+                                    p.cafeInfo__menuItem.h6=`${subcat.name} ${subcat.price}원`
+                        -y++
