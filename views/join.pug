@@ -6,7 +6,7 @@ block content
         .join_container
             form(action=routes.join, method="post" class="form__join")
                 input(type="text", name="name", placeholder="Name",required=true, class="form-control")        
-                input(type="email", name="email", placeholder="EMAIL. 로그인시 사용할 이메일을 적어주세요.",required=true, class="form-control")
+                input(type="email", name="email", placeholder="Email. 로그인시 사용할 이메일을 적어주세요.",required=true, class="form-control")
                 input(type="password", name="password", placeholder="Password. 6글자 이상 입력해주세요.",required=true, class="form-control")
                 input(type="password", name="password2", placeholder="Verify Password. 비밀번호를 재입력 해주세요.",required=true, class="form-control")
                 input(type="submit",value="Join Now" class="btn btn-secondary")
