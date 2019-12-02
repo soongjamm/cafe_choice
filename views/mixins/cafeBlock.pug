@@ -19,6 +19,10 @@ mixin cafeBlock(cafe = {})
                             button(class="xi-heart-o xi-border xi-x like", name="userid", value=user.id)
                             span.small &nbsp;
                             input(type="hidden", name="cafeid", value=cafe.id)
+                else
+                    button(class="xi-heart-o xi-border xi-x like", onclick="display();")
+                    p.small.plzlogin 
+                        | 로그인후 이용하세요.
 
             p.small #{cafe.branch}
             h6.card-text #{cafe.location}

@@ -1,12 +1,5 @@
 mixin cafeInfo(cafe = {})
     
-    script(type="text/javascript").
-        function display() {
-            let tmp = document.querySelector(".plzlogin");
-            if(tmp.style.display == "none")
-                console.log("hi");
-                tmp.style = "display : block";
-        }
     .container
         .cafeInfo
             img.cafeInfo__thumbnail(class="rounded" src=cafe.imageUrl)
