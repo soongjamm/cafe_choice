@@ -25,8 +25,8 @@ block content
     //- -console.log(selection.filter( x=> amenities.hasOwnProperty(x)))
 
     .conditionalSearch__cafeBlock
-        if sel2 != null 
-            p.display-4.container #{sel2}로 검색한 결과 입니다. 
+        if selected != null 
+            p.display-4.container #{selected}로 검색한 결과 입니다. 
             each item in cafes
                 +searchedBlock({
                     id : item.id,
