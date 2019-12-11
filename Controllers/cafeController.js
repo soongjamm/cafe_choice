@@ -180,6 +180,7 @@ export const postAddComment = async(req, res) => {
         })
         cafe.comments.push(newComment.id);
         cafe.save();
+        res.redirect(req.headers.referer);
     }catch(error){
         res.status(400);
     }finally{
