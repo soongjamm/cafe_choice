@@ -6,12 +6,12 @@ const commentSchema = new mongoose.Schema({
         required: "Text is required"
     },
     createdAt: {
-    type: Date,
-    default: Date.now
+        type: Date,
+        default: Date.now
     },
     creator: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "User"
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User"
     }
 })
 

@@ -4,9 +4,6 @@ import { cafeDetail, map} from "../Controllers/cafeController";
 
 const cafeRouter = express.Router();
 
-
-cafeRouter.get(routes.map, map);
-
 cafeRouter.get(routes.cafeDetail(), cafeDetail);
 
 

@@ -29,13 +29,8 @@ export const cafeDetail = async (req, res) =>{
             populate : { path: 'creator', select: 'name'}
         }).exec((err, data) => { 
             cafe=data;
-            //console.log(cafe);
             res.render("cafeDetail", {pageTitle: "cafe Detail", jsStringify, cafe});
         });
-        
-
-
-
     }catch(error){
         console.log(error);
         res.redirect(routes.home);
@@ -43,10 +38,6 @@ export const cafeDetail = async (req, res) =>{
   
 }
 
-export const map = (req, res) =>{
-    
-    res.send("this is map");
-}
 
 export const getLike = async (req, res) => {
     const {
@@ -56,16 +47,13 @@ export const getLike = async (req, res) => {
 }
 
 export const postLike = async(req, res) => {
-    console.log(req);
     const {
         body : {userid, cafeid}
     } = req;    
-    console.log(userid, cafeid);
     try{
         User.findOne({'_id' : userid}, function(err, user){
                 if((user.like.indexOf(cafeid)==-1)){
                     user.like.push(cafeid);
-                    console.log(user.like);
                     user.save();
                     Cafe.findOne({'_id' : cafeid}, function(err,cafe){
                          if((cafe.wholike.indexOf(userid)==-1)){
@@ -75,7 +63,6 @@ export const postLike = async(req, res) => {
                     })
                 }else{
                     user.like.remove(cafeid);
-                    console.log(user.like);
                     user.save();
                     Cafe.findOne({'_id' : cafeid}, function(err,cafe){
                         if((cafe.wholike.indexOf(userid)!=-1)){
@@ -91,35 +78,19 @@ export const postLike = async(req, res) => {
     }catch(error){
         console.log(error);
     }
-    // console.log(user);
-    // if(배열에 카페id 똑같은거 없으면)
-    //     findbyid로 유저 가져와서, 유저 like배열에 카페id 넣어줌
-    //     그리고 save
-
-    //     try{
-    //         Cafe.findOne({'_id' : cafeid}, function(err, cafe){
-    //             for(var i = 0; i<=cafe.comments.length; i++){
-    //                 if(String(cafe.comments[i] == String(commentid))){
-    //                     cafe.comments.remove(commentid);
-    //                     cafe.save();
-    //                 }
-    //             }
-    //         })    
 }
 
 export const hashTag = async (req, res) => {
     // 태그 내용 받아오기
-    const { query: tmp} = req;
-    let tag = Object.keys(tmp);
-    tag= tag[0];
+    const { query: hashtag} = req;
+    let tag = Object.values(hashtag)[0];
 
     const cafes = await Cafe.find( {"tag" : {$regex : tag}});
-    console.log(cafes)
     res.render("hashTag", {pageTitle: "#", cafes, tag});
 }
 
+
 export const search = async (req, res) =>{
-    console.log(Object.keys(req.query));
     const {
         query: { term: searchingBy }
     } = req;
@@ -133,30 +104,34 @@ export const conditionalSearch = (req, res) =>{
 
 
 export const postConditionalSearch = async (req, res) => {
-    const selection = Object.keys(req.body);
+    const checkedOn = Object.keys(req.body);
     // 조건 만족하는 카페 검색
-    const cafes = await Cafe.find({'amenities.name' : {'$all' : Object.keys(req.body) }});
+    const cafes = await Cafe.find({'amenities.name' : {'$all' : checkedOn }});
     
-    // 선택된 조건의 한글명 배열에 저장
-    let sel2 = undefined;
+    // 선택된 조건의 한글명을 배열에 저장 
+    // ~로 검색한 결과입니다. 로 보여주기 위해서
+    let selected = undefined;
     if(cafes != ""){
-        sel2 = selection.map( x => {var tmp = cafes[0].amenities.filter(y => 
-            { if(y.name == x){
-                // console.log(y.amen, x);
-                return Object.values(y.amen);
-            }
-        } )
-        return tmp[0].amen;}
-        );
+        // 조건검색으로 검색된 카페들 중 하나를 선택하여, 그 카페 가진 모든 amenities의 한글명을 가져와 만든 새로운 배열을 selected로
+        selected = checkedOn.map( x => 
+        {   
+            var tmp = cafes[0].amenities.filter(y => { 
+                if(y.name == x){
+                    return Object.values(y.amen);
+                }
+             })
+            return tmp[0].amen;
+        });
     }
-    res.render("conditionalSearch",{pageTitle: "조건검색", cafes, sel2});
+    res.render("conditionalSearch",{pageTitle: "조건검색", cafes, selected});
     
 }
 
 
 export const ameIndex = async(req, res) =>{
-    const cafes = await Cafe.find({});//.sort({"menu.0.subcat.0":1});
+    const cafes = await Cafe.find({});
     // 아메리카노 가격순으로 정렬
+    // menu[0]은 커피류, subcat[0]은 아메리카노
     cafes.sort(function (a, b) {
         return a.menu[0].subcat[0].price - b.menu[0].subcat[0].price;
     });
@@ -166,8 +141,8 @@ export const ameIndex = async(req, res) =>{
     
     cafes.forEach(function(item){
         ameindex+=parseInt(item.menu[0].subcat[0].price);
-        // console.log(item.menu[0].subcat[0]price, ameindex);
     });
+    // 소수점 버리기
     ameindex = Math.floor(ameindex/=cafes.length);
     
     res.render("ameIndex", {pageTitle: "아메지수", cafes, ameindex});
@@ -186,89 +161,56 @@ export const listAll = async (req, res) => {
 }
 
 // 리뷰 등록
-
 export const getAddComment = async(req,res) => {
-    res.redirect(routes.cafeDetail((req.headers.referer).split('/')[4]));
+    res.redirect(req.headers.referer);
 }
 
 //내용,작성자id, 카페id
 export const postAddComment = async(req, res) => {
-    // console.log((req.headers.referer).split('/')[4], req.user.id);
     const { 
-        headers : {referer},
-        body : { review : comment},
-        user
+        body : { review : comment, cafeid},
+        user,
     } = req;
-    const id = referer.split('/')[4];
-    console.log(user.id);
+    console.log(cafeid);
     try{
-        const cafe = await Cafe.findById(id);
-        console.log("hi");
+        const cafe = await Cafe.findById(cafeid);
         const newComment = await Comment.create({
             text : comment,
             creator : user.id 
         })
-        console.log("hi");
-
         cafe.comments.push(newComment.id);
         cafe.save();
     }catch(error){
         res.status(400);
     }finally{
-        res.redirect(routes.cafeDetail((req.headers.referer).split('/')[4]));
-
+        res.redirect(req.headers.referer);
         res.end();
     }
 }
 
 // 리뷰 삭제
 export const getDeleteComment = (req, res) => {
-    res.redirect(routes.cafeDetail((req.headers.referer).split('/')[4]));
+    res.redirect(req.headers.referer);
 }
 
 export const postDeleteComment = (req, res) => {
     const {
         body : {commentid, cafeid}
     } = req;
-    console.log(commentid, cafeid);
-
     try{
         Cafe.findOne({'_id' : cafeid}, function(err, cafe){
             for(var i = 0; i<=cafe.comments.length; i++){
-                if(String(cafe.comments[i] == String(commentid))){
+                if(cafe.comments[i] == commentid){
                     cafe.comments.remove(commentid);
                     cafe.save();
                 }
             }
         })
-        res.redirect(routes.cafeDetail(cafeid));
-    }catch(error){
+        res.redirect(req.headers.referer);
+    }catch(error){dw
         console.log(error);
+        res.redirect(req.headers.referer);
     }
 
-    // const { 
-    //     headers : {referer},
-    //     body : { review : comment},
-    //     user
-    // } = req;
-    // const id = referer.split('/')[4];
-    // console.log(user.id);
-    // try{
-    //     const cafe = await Cafe.findById(id);
-    //     console.log("hi");
-    //     const newComment = await Comment.create({
-    //         text : comment,
-    //         creator : user.id 
-    //     })
-    //     console.log("hi");
-
-    //     cafe.comments.push(newComment.id);
-    //     cafe.save();
-    // }catch(error){
-    //     res.status(400);
-    // }finally{
-    //     res.redirect(routes.cafeDetail((req.headers.referer).split('/')[4]));
-
-    //     res.end();
-    // }
 }
+

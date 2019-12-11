@@ -42,10 +42,10 @@ mixin searchedBlock(cafe = {})
                             i(class= item.icon) &nbsp; #{item.amen} &emsp;
                     h5.card-text.form-inline
                         each item in cafe.tag
-                            -var x=item
+                            -var tagname=item
                             form(action=routes.hashTag, method="get")
                                 span
-                                    button(class="badge badge-dark tag", name=x) &emsp; ##{item} &emsp;
+                                    button(class="badge badge-dark tag", name="hashtag", value=tagname) &emsp; ##{item} &emsp;
                     a(href=routes.cafeDetail(cafe.id) class="btn btn-primary marginbottom-2")|자세히 보기
                     <p class="card-text"><small class="text-muted">#{cafe.comments.length} 개의 리뷰가 작성되었습니다.</small></p>
                 </div>
@@ -53,14 +53,3 @@ mixin searchedBlock(cafe = {})
             </div>
         </div>
 
-
-    //- .cafeBlock
-    //-     a(href=routes.cafeDetail(cafe.id))
-    //-         img.searchedBlock__thumbnail(src=cafe.imageUrl)
-    //-         h2.searchedBlock__name=cafe.name
-    //-         h4.cafeBlock__americano
-    //-             p=`${cafe.menu[0].name} ${cafe.menu[0].price}원`
-    //-         h5.searchedBlock__location=cafe.location
-    //-         h4.searchedBlock__option
-    //-             each item in cafe.amenities
-    //-                 i(class= item.icon) &nbsp; #{item.amen} &emsp;

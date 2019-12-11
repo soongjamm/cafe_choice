@@ -37,6 +37,7 @@ block content
         if(user)
             form(class="add__comment", action=routes.addComment, method="post")
                 input(type="text", size="100%", class="form-control-lg comment" name="review", placeholder="리뷰를 작성하세요.")
+                input(type="hidden", name="cafeid", value=cafe.id)
                 button.btn.btn-dark 작성
             ul.cafe__comments-list
                 each comment in cafe.comments.reverse()

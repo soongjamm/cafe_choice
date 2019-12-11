@@ -1,0 +1,141 @@
+@startuml
+
+scale 1080 width
+
+
+namespace CAFECHOICE{
+
+
+    namespace Controllers {
+        class cafeController{
+            : home(req,res);
+            : cafeDetail(req,res);
+            : getLike(req,res);
+            : postLike(req,res);
+            : hashtag(req,res);
+            : search(req,res);
+            : postConditionalSearch(req,res);
+            : ameIndex(req,res);
+            : listAll(req,res);
+            : getAddComment(req,res);
+            : postAddComment(req,res);
+            : getDeleteComment(req,res);
+            : postDeleteComment(req,res);
+        }
+        class userController{
+            : getJoin(req,res);
+            : postJoin(req,res,next);
+            : getLogin(req,res);
+            : postLogin();
+            : logout(req,res);
+            : userDetail(req,res);
+            : githubLogin();
+            : githubLoginCallback(_, __, profile, cb);
+            : postGithubLogin(req,res);
+            : kakaoLogin();
+            : kakaoLoginCallback(_, __, profile, cb);
+            : postKakaoLogin(req,res);
+        } 
+    }
+
+    namespace Models {
+        class cafes{
+            cafeSchema
+        }
+        class users{
+            userSchema
+        }
+        class comments{
+            commentSchema
+        }
+    
+    }
+
+    namespace Routers {
+        class cafeRouter{
+            : .get(routes.cafeDetail(), cafeDetail);
+    }
+        class globalRouter{
+            : .get(routes.addComment, getAddComment);
+            : .post(routes.addComment, postAddComment);
+            : .get(routes.deleteComment, getDeleteComment);
+            : .post(routes.deleteComment, postDeleteComment);
+            : .get(routes.like, getLike);
+            : .post(routes.like, postLike);
+            : .get(routes.listAll, listAll);
+            : .get(routes.join, onlyPublic, getJoin);
+            : .post(routes.join, onlyPublic, postJoin, postLogin);
+            : .get(routes.login, onlyPublic, getLogin);
+            : .post(routes.login, onlyPublic, postLogin,);
+            : .get(routes.github, onlyPublic, githubLogin);
+            : .get(routes.githubCallback, passport.authenticate("github", 
+                    {failureRedirect : "/login"}), 
+                    postGithubLogin );
+            :.get(routes.kakao, onlyPublic, kakaoLogin);
+            .get(routes.kakaoCallback, passport.authenticate("kakao", {failureRedirect : "/login"}), 
+                    postKakaoLogin );
+    }
+        class userRouter{
+            :get(routes.editProfile, onlyPrivate, editProfile);
+            :get(routes.changePassword, onlyPrivate, changePassword);
+            :get(routes.userDetail(), userDetail);
+        }
+    }
+
+    namespace Views {
+    
+        class layouts {
+            main.pug
+        }
+
+        class mixins {
+            cafeBlock.pug
+            cafeInfo.pug
+            map.pug
+            menu.pug
+            reviewBlock.pug
+            searchedBlock.pug
+            userInfo.pug
+        }
+            
+
+        class partials {
+                footer.pug
+                header.pug
+        }
+        class etc{
+            ameIndex
+                cafeDetail.pug
+                postConditionalSearch.pug
+                hashtag.pug
+                home.pug
+                join.pug
+                listAll.pug
+                login.pug
+                search.pug
+                style.css
+                userDetail.pug
+        }
+    }
+
+    package etc_js_files{
+        class routes
+        class middleewares{
+            : localsMiddleware(req,res,next)
+            : onlyPublic(req,res,next)
+            : onlyPrivate(req,res,next)
+        }
+        class passport
+        class db
+        class app
+        class init
+    }
+
+
+
+}
+
+
+
+
+@enduml
