@@ -1,4 +1,4 @@
-//Global Router
+//Global Router 
 const HOME = "/";
 const JOIN = "/join";
 const LOGIN = "/login";
@@ -37,43 +37,43 @@ const HASH_TAG = "/hashtag"
 
 //routes object
 const routes = {
-    home : HOME,
-    join : JOIN,
-    login : LOGIN,
-    logout : LOGOUT,
-    search : SEARCH,
-    conditionalSearch : CONDITIONAL_SEARCH,
-    ameIndex : AME_INDEX,
-    listAll : LIST_ALL,
-    users : USERS,
-    userDetail : id => {
-        if(id){
+    home: HOME,
+    join: JOIN,
+    login: LOGIN,
+    logout: LOGOUT,
+    search: SEARCH,
+    conditionalSearch: CONDITIONAL_SEARCH,
+    ameIndex: AME_INDEX,
+    listAll: LIST_ALL,
+    users: USERS,
+    userDetail: id => {
+        if (id) {
             return `/users/${id}`;
-        }else{
+        } else {
             return USER_DETAIL;
         }
     },
-    editProfile : EDIT_PROFILE,
-    changePassword : CHANGE_PASSWORD,
-    cafes : CAFES,
-    cafeDetail : id => {
-        if(id){
+    editProfile: EDIT_PROFILE,
+    changePassword: CHANGE_PASSWORD,
+    cafes: CAFES,
+    cafeDetail: id => {
+        if (id) {
             return `/cafes/${id}`;
-        }else{
+        } else {
             return CAFE_DETAIL;
         }
     },
-    map : MAP,
-    github : GITHUB,
-    githubCallback : GITHUB_CALLBACK,
-    kakao : KAKAO,
-    kakaoCallback : KAKAO_CALLBACK,
+    map: MAP,
+    github: GITHUB,
+    githubCallback: GITHUB_CALLBACK,
+    kakao: KAKAO,
+    kakaoCallback: KAKAO_CALLBACK,
     // facebook : FB,
     // facebookCallback : FB_CALLBACK
-    addComment : ADD_COMMENT,
-    deleteComment : DELETE_COMMENT,
-    hashTag : HASH_TAG,
-    like : LIKE
+    addComment: ADD_COMMENT,
+    deleteComment: DELETE_COMMENT,
+    hashTag: HASH_TAG,
+    like: LIKE
 }
 
 export default routes;
