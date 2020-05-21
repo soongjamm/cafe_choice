@@ -1,9 +1,9 @@
 # cafe_choice
 # 명지대학교 자연캠퍼스 주변 카페 모음
-<br>
+
 http://cafe-choice.herokuapp.com/
-<br>
---- 기능
+
+### 기능
 * 각종 검색 (조건 검색 등)
 * 즐겨찾기
 * 댓글
