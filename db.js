@@ -1,18 +1,24 @@
-import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config();
 
-mongoose.connect(
-     process.env.MONGO_URL2,
-    {
-        useUnifiedTopology: true,
-        useNewUrlParser: true,
-        useFindAndModify: false
-    }
-);
+const { Sequelize, Model, DataTypes } = require('sequelize');
 
-const db = mongoose.connection;
-const handleOpen = () => console.log("👍connected to mongoDB");
-const handleError = (error) => console.log(`Error on connection ${error}`);
-db.once("open", handleOpen);
-db.on("error", handleError);
+const sequelize = new Sequelize('cafe_choice', process.env.MYSQL_UNAME, process.env.MYSQL_PW, {
+    host: 'localhost',
+    dialect: 'mysql'
+});
+
+
+
+const init = async () => {
+    try {
+        await sequelize.authenticate();
+        console.log('🥰connection has been established successfully.');
+    } catch (error) {
+        console.error('Unale to connect to the database', error);
+
+    }
+}
+
+init();
+

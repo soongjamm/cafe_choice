@@ -4,9 +4,9 @@ import app from "./app";
 
 dotenv.config();
 
-import "./models/cafes";
-import "./models/users";
-import "./models/comments";
+// import "./models/cafes";
+// import "./models/users";
+// import "./models/comments";
 
 const PORT = process.env.PORT || 4000;
 
