@@ -1,13 +1,16 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-const { Sequelize, Model, DataTypes } = require('sequelize');
+const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize('cafe_choice', process.env.MYSQL_UNAME, process.env.MYSQL_PW, {
+export const sequelize = new Sequelize(
+    'cafe_choice',
+    process.env.MYSQL_UNAME,
+    process.env.MYSQL_PW, {
     host: 'localhost',
     dialect: 'mysql'
-});
-
+}
+);
 
 
 const init = async () => {
@@ -21,4 +24,3 @@ const init = async () => {
 }
 
 init();
-

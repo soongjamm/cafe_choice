@@ -40,7 +40,7 @@ app.use(morgan("dev"));
 // app.use(passport.session());
 // app.use(localsMiddleware);
 
-// app.use(routes.home, globalRouter);
+app.use(routes.home, globalRouter);
 // app.use(routes.cafes, cafeRouter);
 // app.use(routes.users, userRouter);
 

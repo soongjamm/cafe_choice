@@ -1,19 +1,30 @@
-import mongoose from "mongoose";
-import passportLocalMongoose from "passport-local-mongoose";
+const { Sequelize, DataTypes } = require('sequelize');
+import { sequelize } from '../db'
 
-const userSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  like : [{
-    type : mongoose.Schema.Types.ObjectId,
-    ref : "Cafe"
-  }],
-  githubId: Number,
-  kakaoId: Number
-});
+const User = sequelize.define('User', {
+  user_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    primaryKey: true
+  },
+  user_name: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  phone: {
+    type: DataTypes.INTEGER,
+    allowNull: false
+  },
+  github_id: {
+    type: DataTypes.INTEGER,
+  },
+  kakao_id: {
+    type: DataTypes.INTEGER,
+  }
+}, {
+  sequelize,
+  modelName: 'User',
+  timestamps: false
+})
 
-userSchema.plugin(passportLocalMongoose, { usernameField: "email" });
-
-const model = mongoose.model("User", userSchema);
-
-export default model;
+export default User;
